@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Andressa Data Analyst</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Ajustes CSS necessários para cards lado a lado -->
+    <style>
+        /* Faz a lista .features ser um flex container: cards lado a lado */
+        ul.features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap; /* quebra para múltiplas linhas em telas menores */
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        /* Estilo base dos cards (ajuste width se quiser) */
+        ul.features li {
+            width: 280px;
+            list-style: none;
+            text-align: center;
+            position: relative; /* necessário para o dropdown absoluto dentro */
+            padding: 6px 10px;
+        }
+
+        /* Popup de links (inicialmente oculto) */
+        .project-links {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 12px;
+            z-index: 50;
+            text-align: left;
+        }
+        .project-links.show {
+            display: block;
+        }
+        .project-links a {
+            display: block;
+            margin: 6px 0;
+            color: #405060;
+            text-decoration: none;
+            font-size: 0.98em;
+        }
+
+        /* Responsividade: em telas bem pequenas, cards ocupam largura maior (1 coluna) */
+        @media (max-width: 520px) {
+            ul.features li {
+                width: 100%;
+                max-width: 420px;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1 style="font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 3em; letter-spacing: 0.01em; text-transform: uppercase; text-align: center; margin-bottom: 0.0em;">
+                Andressa Griebler Gusmão
+            </h1>
+
+            <h1>Portifolio</h1>
+            <p>An Environmental Engineer well verse in data analysis with SQL, Python, Tableau, Power BI and Microsoft Office <br />
+            built by <a href="https://www.linkedin.com/in/andressa-griebler-gusm%C3%A3o-08397836a/">@andressagrieblergusmao</a>.</p>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#first">Projects</a></li>
+                <li><a href="#cta">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Introduction -->
+            <section id="intro" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 600; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
+                                ABOUT ANDRESSA
+                            </h2>
+                        </header>
+                        <p>She has been grounded in academic research, where she gained extensive experience analyzing large and complex datasets. Her background in environmental engineering equipped her to handle a wide range of variables and identify actionable insights. These skills make her proficient in transforming challenging data into clear results for decision-making.</p>
+                        <ul class="actions">
+                            <li><a href="about.html" class="button" target="_blank">More About Andressa</a></li>
+                        </ul>
+                    </div>
+                    <span class="image"><img src="images/Foto.jpg" alt="image"></span>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="first" class="main special">
+                <header class="major">
+                    <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 700; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
+                        DATA ANALYSIS PROJECTS
+                    </h2>
+                    <p style="font-size:1.18em; font-weight:300; text-align:center;">
+                        Check out some of Andressa's most recent projects:
+                    </p>
+                </header>
+
+                <!-- ÚNICA lista de features (cada <li> é um card) -->
+                <ul class="features">
+
+                    <!-- Projeto 1 -->
+                    <li>
+                        <button
+                            onclick="toggleLinks('links1')"
+                            style="background: transparent; border: none; cursor: pointer; padding: 0;"
+                            aria-label="Abrir links do projeto 1">
+                            <span class="image">
+                                <img src="images/dadosC.jpg" alt="image" style="width:228px; margin-bottom:12px;">
+                            </span>
+                        </button>
+
+                        <h3 style="font-size:1.5em; font-weight:300; margin:5px 0 4px 0;">Data Analysis</h3>
+
+                        <p style="font-size:1em; font-weight:300; margin:0 0 8px 0;">
+                            Complete data cleaning and analysis project using SQL, PowerBI and Python, with final visualization in PowerPoint.
+                        </p>
+
+                        <!-- painel de links com ID único -->
+                        <div id="links1" class="project-links" aria-hidden="true">
+                            <a href="https://github.com/andressagrieblergusmao/analysis_delivery/blob/main/project.sql" target="_blank">SQL delivery code</a>
+                            <a href="https://github.com/andressagrieblergusmao/analysis_delivery/blob/main/regressoes_delivery.py" target="_blank">Python delivery code</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/19d1GfDVT6nUnI6_dsZGhdNOf7AEmYyOF" target="_blank">PowerBI</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/19d1GfDVT6nUnI6_dsZGhdNOf7AEmYyOF" target="_blank">PowerPoint</a>
+                        </div>
+                    </li>
+
+                    <!-- Projeto 2 -->
+                    <li>
+                        <button
+                            onclick="toggleLinks('links2')"
+                            style="background: transparent; border: none; cursor: pointer; padding: 0;"
+                            aria-label="Abrir links do projeto 2">
+                            <span class="image">
+                                <img src="images/qgisicon.jpg" alt="image" style="width:128px; margin-bottom:16px;">
+                            </span>
+                        </button>
+
+                        <h3 style="font-size:1.5em; font-weight:300; margin:5px 0 4px 0;">Geospatial Analysis </h3>
+
+                        <p style="font-size:1em; font-weight:300; margin:0 0 8px 0;">
+                            Projects using QGIS, custom map production, and documented step-by-step PDFs describing the tools and methods applied.
+                        </p>
+
+                        <div id="links2" class="project-links" aria-hidden="true">
+                            <a href="https://drive.google.com/drive/u/0/folders/1-V22UrAwPuG6u90L4xykKo8FgIxIsDTM" target="_blank">Maps from "HARVEST Project"</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/1oBfLNzzi6olHdrqlZkThDWNvPZV8_jW3" target="_blank">Study of a rural area using QGis</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/1N8Ju08-pQ6PRaniKYn3eMXWd7cX59g09" target="_blank">Geospatial tools</a>
+                        </div>
+                    </li>
+
+                    
+                    <!-- Projeto 3 -->
+                    <li>
+                        <button
+                            onclick="toggleLinks('links3')"
+                            style="background: transparent; border: none; cursor: pointer; padding: 0;"
+                            aria-label="Abrir links do projeto 2">
+                            <span class="image">
+                                <img src="images/report.jpg" alt="image" style="width:128px; margin-bottom:12px;">
+                            </span>
+                        </button>
+
+                        <h3 style="font-size:1.5em; font-weight:300; margin:5px 0 4px 0;">Reports</h3>
+
+                        <p style="font-size:1em; font-weight:300; margin:0 0 8px 0;">
+                            Technical reports, project documentation, and scientific publications—including papers, articles, and posters.
+                        </p>
+                        <div id="links3" class="project-links" aria-hidden="true">
+                            <a href="https://drive.google.com/drive/u/0/folders/13PcbjrxojYR93atRmX_02ieN4grJbEvP" target="_blank">Techical Reports (PT)</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/1vcJ8ou9DMg8dwC-V2uk69gcU3o55r14i" target="_blank">Papers (PT/EN)</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+            <!-- Contact Section -->
+<section id="cta" class="main special">
+    <header class="major">
+        <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 700; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
+            CONTACT
+        </h2>
+        <p style="font-size:1.18em; font-weight:300; text-align:center;">
+            Want to get in touch? Send me a message!
+        </p>
+    </header>
+    <ul class="actions stacked" style="justify-content:center; margin-top:20px;">
+        <li><a href="mailto:andressagrieblergusmao@gmail.com" class="button" target="_blank">Send an Email</a></li>
+    </ul>
+</section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>Skills</h2>
+                <p>Python  &bull; SQL  &bull; Microsoft Office  &bull; Tableau  &bull; Data Visualization  &bull; Statistics Analysis  &bull; Data modeling  &bull; Data visualization  &bull; Agisoft  &bull; QGis  &bull; Geospatial Analysis  &bull; Map Building</p>
+            </section>
+            <section>
+                <h2>Information</h2>
+                <dl class="alt">
+                    <dt>Address</dt>
+                    <dd> Bragança, 5300-146 &bull; Portugal</dd>
+                    <dt>Email</dt>
+                    <dd><a href="#">andressagrieblergusmao@gmail.com</a></dd>
+                </dl>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/andressa-griebler-gusm%C3%A3o-08397836a/" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
+                    <li><a href="https://github.com/andressagrieblergusmao" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Alterna exibição do painel de links com base no ID (cada projeo tem ID único)
+        function toggleLinks(id) {
+            // fecha outros painéis abertos
+            document.querySelectorAll('.project-links.show').forEach(function(el){
+                if (el.id !== id) el.classList.remove('show');
+            });
+
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.classList.toggle('show');
+        }
+
+        // Fecha painel se clicar fora (melhora a usabilidade)
+        document.addEventListener('click', function(e) {
+            // se o clique foi em um botão que abre links, ignora (o botão já trata)
+            if (e.target.closest('button') && e.target.closest('button').getAttribute('aria-label')?.startsWith('Abrir links')) {
+                return;
+            }
+
+            // se clicar fora de qualquer .project-links, fecha os abertos
+            document.querySelectorAll('.project-links.show').forEach(function(openEl) {
+                if (!openEl.contains(e.target)) {
+                    openEl.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
