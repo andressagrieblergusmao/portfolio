@@ -5,207 +5,271 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Andressa Data Analyst</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Andressa Data Analyst</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Ajustes CSS necessários para cards lado a lado -->
+    <style>
+        /* Faz a lista .features ser um flex container: cards lado a lado */
+        ul.features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap; /* quebra para múltiplas linhas em telas menores */
+            padding: 0;
+            margin: 0 auto;
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1 style="
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 800;
-  font-size: 3em;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 0.0em;
-">
-  Andressa Griebler Gusmão<br>
-</h1>
+        /* Estilo base dos cards (ajuste width se quiser) */
+        ul.features li {
+            width: 280px;
+            list-style: none;
+            text-align: center;
+            position: relative; /* necessário para o dropdown absoluto dentro */
+            padding: 6px 10px;
+        }
 
-						<h1> Portifolio</h1>
-						<p>An Environmental Engineer well verse in data analysis with SQL, Python, Tableau, Power BI and Microsoft Office <br />
-						built by <a href="https://www.linkedin.com/in/andressa-griebler-gusm%C3%A3o-08397836a/">@andressagrieblergusmao</a>.</p>
-					</header>
+        /* Popup de links (inicialmente oculto) */
+        .project-links {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 12px;
+            z-index: 50;
+            text-align: left;
+        }
+        .project-links.show {
+            display: block;
+        }
+        .project-links a {
+            display: block;
+            margin: 6px 0;
+            color: #405060;
+            text-decoration: none;
+            font-size: 0.98em;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Projects</a></li>
-							<li><a href="#cta">Contact</a></li>
-						</ul>
-					</nav>
+        /* Responsividade: em telas bem pequenas, cards ocupam largura maior (1 coluna) */
+        @media (max-width: 520px) {
+            ul.features li {
+                width: 100%;
+                max-width: 420px;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
 
-				<!-- Main -->
-					<div id="main">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 600; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
-      ABOUT ANDRESSA
-    </h2>
-										</header>
-										<p>She has been grounded in academic research, where she gained extensive experience analyzing large and complex datasets. Her background in environmental engineering equipped her to handle a wide range of variables and identify actionable insights. These skills make her proficient in transforming challenging data into clear results for decision-making.</p>
-										<ul class="actions">
-											<li><a href="https://www.cienciavitae.pt//en/0617-4227-62D0" class="button">Learn more about her academic CV</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/Foto.jpg" alt="image"></span>
-								</div>
-							</section>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1 style="font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 3em; letter-spacing: 0.01em; text-transform: uppercase; text-align: center; margin-bottom: 0.0em;">
+                Andressa Griebler Gusmão
+            </h1>
 
-						<!-- First Section -->
-<section id="first" class="main special">
-  <header class="major">
-    <!-- Título destacado -->
-    <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 700; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
-      DATA ANALYSIS PROJECTS
-    </h2>
-    <p style="font-size:1.18em; font-weight:300; text-align:center;">
-      Check out some of Andressa's most recent projects:
-    </p>
-  </header>
-  <ul class="features">
-    <li style="position: relative; text-align: center;">
-      <button 
-        onclick="document.getElementById('projectLinks').classList.toggle('show');"
-        style="background: transparent; border: none; cursor: pointer; padding: 0;"
-        aria-label="Abrir links do projeto"
-      >
-        <span class="image">
-          <img src="images/delivery.png" alt="image" style="width:128px; margin-bottom:12px;">
-        </span>
-      </button>
-      <!-- Título do projeto destacado -->
-      <h3 style="font-size:1.5em; font-weight:300;  margin-bottom:5px; margin-top:0;">Delivery data</h3>
-      <!-- Descrição mais discreta -->
-      <p style="font-size:1em;  font-weight:300; margin-top:0;">
-        Complete data cleaning and analysis project using SQL, PowerBI and Python, with final visualization in PowerPoint.
-      </p>
-      <!-- Caixa de links flutuante, oculta por padrão -->
-      <div 
-        id="projectLinks" 
-        style="
-          display: none;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 225px;
-          background: #fff;
-          border: 1px solid #e6e6e6;
-          border-radius: 10px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-          padding: 13px 10px;
-          z-index: 10;
-        ">
-        <a href="https://github.com/andressagrieblergusmao/analysis_delivery/blob/main/project.sql" target="_blank" 
-           style="display:block; margin:7px 0; color:#405060; text-decoration:none; font-size:0.98em; font-weight:400; transition:color 0.2s;">
-          SQL delivery code
-        </a>
-        <a href="https://github.com/andressagrieblergusmao/analysis_delivery/blob/main/regressoes_delivery.py" target="_blank" 
-           style="display:block; margin:7px 0; color:#405060; text-decoration:none; font-size:0.98em; font-weight:400; transition:color 0.2s;">
-          Python delivery code
-        </a>
-        <a href="https://drive.google.com/drive/u/0/folders/19d1GfDVT6nUnI6_dsZGhdNOf7AEmYyOF" target="_blank" 
-           style="display:block; margin:7px 0; color:#405060; text-decoration:none; font-size:0.98em; font-weight:400; transition:color 0.2s;">
-          PowerBI
-        </a>
-		<a href="https://drive.google.com/drive/u/0/folders/19d1GfDVT6nUnI6_dsZGhdNOf7AEmYyOF" target="_blank" 
-           style="display:block; margin:7px 0; color:#405060; text-decoration:none; font-size:0.98em; font-weight:400; transition:color 0.2s;">
-         PowerPoint
-        </a>
-      </div>
-    </li>
-    <!-- Adicione mais projetos duplicando <li> -->
-  </ul>
-</section>
-<script>
-  // Toggle mostrar/ocultar a caixinha
-  document.addEventListener('click', function(e) {
-    var button = document.querySelector('button[aria-label="Abrir links do projeto"]');
-    var box = document.getElementById('projectLinks');
-    if (!button.contains(e.target) && !box.contains(e.target)) {
-      box.classList.remove('show');
-      box.style.display = 'none';
-    } else if (box.classList.contains('show')) {
-      box.style.display = 'block';
-    } else {
-      box.style.display = 'none';
-    }
-  });
-</script>
+            <h1>Portifolio</h1>
+            <p>An Environmental Engineer well verse in data analysis with SQL, Python, Tableau, Power BI and Microsoft Office <br />
+            built by <a href="https://www.linkedin.com/in/andressa-griebler-gusm%C3%A3o-08397836a/">@andressagrieblergusmao</a>.</p>
+        </header>
 
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#first">Projects</a></li>
+                <li><a href="#cta">Contact</a></li>
+            </ul>
+        </nav>
 
-<script>
-  // Toggle mostrar/ocultar
-  document.addEventListener('click', function(e) {
-    var button = document.querySelector('button[aria-label="Abrir links do projeto"]');
-    var box = document.getElementById('projectLinks');
-    if (!button.contains(e.target) && !box.contains(e.target)) {
-      box.classList.remove('show');
-      box.style.display = 'none';
-    } else if (box.classList.contains('show')) {
-      box.style.display = 'block';
-    } else {
-      box.style.display = 'none';
-    }
-  });
-</script>
+        <!-- Main -->
+        <div id="main">
 
-<script>
-  function toggleLinks(event) {
-    event.preventDefault();
-    const links = document.getElementById('links-projetos');
-    if (links.style.display === 'none' || links.style.display === '') {
-      links.style.display = 'block';
-    } else {
-      links.style.display = 'none';
-    }
-  }
-</script>
+            <!-- Introduction -->
+            <section id="intro" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 600; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
+                                ABOUT ANDRESSA
+                            </h2>
+                        </header>
+                        <p>She has been grounded in academic research, where she gained extensive experience analyzing large and complex datasets. Her background in environmental engineering equipped her to handle a wide range of variables and identify actionable insights. These skills make her proficient in transforming challenging data into clear results for decision-making.</p>
+                        <ul class="actions">
+                            <li><a href="https://www.cienciavitae.pt//en/0617-4227-62D0" class="button">Learn more about her academic CV</a></li>
+                        </ul>
+                    </div>
+                    <span class="image"><img src="images/Foto.jpg" alt="image"></span>
+                </div>
+            </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Skills</h2>
-							<p>Python  &bull; SQL  &bull; Microsoft Office  &bull; Tableau  &bull; Data Visualization  &bull; Statistics Analysis  &bull; Data modeling  &bull; Data visualization  &bull; Agisoft  &bull; QGis  &bull; Geospatial Analysis  &bull; Map Building    </p>
-						</section>
-						<section>
-							<h2>Information</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd> Bragança, 5300-146 &bull; Portugal</dd>
-								<dt>Email</dt>
-								<dd><a href="#">andressagrieblergusmao@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-							</ul>
-					</footer>
+            <!-- Projects Section -->
+            <section id="first" class="main special">
+                <header class="major">
+                    <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 700; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
+                        DATA ANALYSIS PROJECTS
+                    </h2>
+                    <p style="font-size:1.18em; font-weight:300; text-align:center;">
+                        Check out some of Andressa's most recent projects:
+                    </p>
+                </header>
 
-			</div>
+                <!-- ÚNICA lista de features (cada <li> é um card) -->
+                <ul class="features">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                    <!-- Projeto 1 -->
+                    <li>
+                        <button
+                            onclick="toggleLinks('links1')"
+                            style="background: transparent; border: none; cursor: pointer; padding: 0;"
+                            aria-label="Abrir links do projeto 1">
+                            <span class="image">
+                                <img src="images/delivery.png" alt="image" style="width:128px; margin-bottom:12px;">
+                            </span>
+                        </button>
 
-	</body>
+                        <h3 style="font-size:1.5em; font-weight:300; margin:5px 0 4px 0;">Delivery data</h3>
+
+                        <p style="font-size:1em; font-weight:300; margin:0 0 8px 0;">
+                            Complete data cleaning and analysis project using SQL, PowerBI and Python, with final visualization in PowerPoint.
+                        </p>
+
+                        <!-- painel de links com ID único -->
+                        <div id="links1" class="project-links" aria-hidden="true">
+                            <a href="https://github.com/andressagrieblergusmao/analysis_delivery/blob/main/project.sql" target="_blank">SQL delivery code</a>
+                            <a href="https://github.com/andressagrieblergusmao/analysis_delivery/blob/main/regressoes_delivery.py" target="_blank">Python delivery code</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/19d1GfDVT6nUnI6_dsZGhdNOf7AEmYyOF" target="_blank">PowerBI</a>
+                            <a href="https://drive.google.com/drive/u/0/folders/19d1GfDVT6nUnI6_dsZGhdNOf7AEmYyOF" target="_blank">PowerPoint</a>
+                        </div>
+                    </li>
+
+                    <!-- Projeto 2 -->
+                    <li>
+                        <button
+                            onclick="toggleLinks('links2')"
+                            style="background: transparent; border: none; cursor: pointer; padding: 0;"
+                            aria-label="Abrir links do projeto 2">
+                            <span class="image">
+                                <img src="images/qgisicon.jpg" alt="image" style="width:128px; margin-bottom:12px;">
+                            </span>
+                        </button>
+
+                        <h3 style="font-size:1.5em; font-weight:300; margin:5px 0 4px 0;">Delivery data (copy)</h3>
+
+                        <p style="font-size:1em; font-weight:300; margin:0 0 8px 0;">
+                            Example copy of the same project card so you see two side-by-side.
+                        </p>
+
+                        <div id="links2" class="project-links" aria-hidden="true">
+                            <a href="#" target="_blank">SQL delivery code</a>
+                            <a href="#" target="_blank">Python delivery code</a>
+                            <a href="#" target="_blank">PowerBI</a>
+                            <a href="#" target="_blank">PowerPoint</a>
+                        </div>
+                    </li>
+
+                    
+                    <!-- Projeto 3 -->
+                    <li>
+                        <button
+                            onclick="toggleLinks('links2')"
+                            style="background: transparent; border: none; cursor: pointer; padding: 0;"
+                            aria-label="Abrir links do projeto 2">
+                            <span class="image">
+                                <img src="images/delivery.png" alt="image" style="width:128px; margin-bottom:12px;">
+                            </span>
+                        </button>
+
+                        <h3 style="font-size:1.5em; font-weight:300; margin:5px 0 4px 0;">Delivery data (copy)</h3>
+
+                        <p style="font-size:1em; font-weight:300; margin:0 0 8px 0;">
+                            Examplell copy of the same project card so you see two side-by-side.
+                        </p>
+
+                        <div id="links2" class="project-links" aria-hidden="true">
+                            <a href="#" target="_blank">SQL delivery code</a>
+                            <a href="#" target="_blank">Python delivery code</a>
+                            <a href="#" target="_blank">PowerBI</a>
+                            <a href="#" target="_blank">PowerPoint</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>Skills</h2>
+                <p>Python  &bull; SQL  &bull; Microsoft Office  &bull; Tableau  &bull; Data Visualization  &bull; Statistics Analysis  &bull; Data modeling  &bull; Data visualization  &bull; Agisoft  &bull; QGis  &bull; Geospatial Analysis  &bull; Map Building</p>
+            </section>
+            <section>
+                <h2>Information</h2>
+                <dl class="alt">
+                    <dt>Address</dt>
+                    <dd> Bragança, 5300-146 &bull; Portugal</dd>
+                    <dt>Email</dt>
+                    <dd><a href="#">andressagrieblergusmao@gmail.com</a></dd>
+                </dl>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
+                    <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Alterna exibição do painel de links com base no ID (cada projeo tem ID único)
+        function toggleLinks(id) {
+            // fecha outros painéis abertos
+            document.querySelectorAll('.project-links.show').forEach(function(el){
+                if (el.id !== id) el.classList.remove('show');
+            });
+
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.classList.toggle('show');
+        }
+
+        // Fecha painel se clicar fora (melhora a usabilidade)
+        document.addEventListener('click', function(e) {
+            // se o clique foi em um botão que abre links, ignora (o botão já trata)
+            if (e.target.closest('button') && e.target.closest('button').getAttribute('aria-label')?.startsWith('Abrir links')) {
+                return;
+            }
+
+            // se clicar fora de qualquer .project-links, fecha os abertos
+            document.querySelectorAll('.project-links.show').forEach(function(openEl) {
+                if (!openEl.contains(e.target)) {
+                    openEl.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
