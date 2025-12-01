@@ -83,7 +83,8 @@
         <nav id="nav">
             <ul>
                 <li><a href="#intro" class="active">Introduction</a></li>
-                <li><a href="#first">Projects</a></li>
+                <li><a href="#first">Data Projects</a></li>
+                <li><a href="#social"> Scientific Outreach</a></li>
                 <li><a href="#cta">Contact</a></li>
             </ul>
         </nav>
@@ -195,6 +196,65 @@
                         </div>
                     </li>
 
+                    <!-- Academic Gallery Section -->
+                     </ul>
+            </section>
+<section id="social" class="main special">
+    <header class="major">
+        <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 1.7em; font-weight: 700; letter-spacing: 0.01em; color: #8a3a81; text-align: center;">
+            SCIENTIFIC OUTREACH & COMMUNITY PROJECTS 
+        </h2>
+         <p style="font-size:1.18em; font-weight:300; text-align:center;">
+                        Explore how Andressa transforms environmental knowledge into real-world impact.
+From fieldwork and greenhouse experiments to community education, each project showcases both her technical expertise and her commitment to sustainable development.
+                    </p>
+<div class="carousel-container">
+    <button class="carousel-btn prev">&#10094;</button>
+    
+    <div class="carousel-wrapper">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="images/ciencia.jpg" alt="Amostra 1">
+                <p class="slide-caption">Soil Day Workshop for children in Bragança 2024</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/ecology.jpg" alt="Amostra 1">
+                <p class="slide-caption">ForestWaterUp initiative acorn collection</p>
+            </div>
+             <div class="carousel-slide">
+                <img src="images/fao.jpg" alt="Amostra 1">
+                <p class="slide-caption">Assistance for the FAO delegation in Mogadouro</p>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="images/morangos.jpg" alt="Amostra 2">
+                <p class="slide-caption">Strawberry harvesting and distribution - HARVEST Project</p>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="images/aula.jpg" alt="Amostra 3">
+                <p class="slide-caption">Environmental awareness class for children in Chaves</p>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="images/sus.jpg" alt="Amostra 1">
+                <p class="slide-caption">Workshop in the greenhouse for teenagers from Bragança</p>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <button class="carousel-btn next">&#10095;</button>
+</div>
+<div class="center-button">
+  <a href="journey.html" target="_blank" class="simple-btn">
+    👉 Explore the Skills Behind These Projects 👈
+  </a>
+</div>
+
+  </header>
+  
                 </ul>
             </section>
             <!-- Contact Section -->
@@ -274,6 +334,30 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+<script>
+document.querySelectorAll('.carousel-container').forEach(function(carousel) {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+    function updateCarousel() {
+        const slideWidth = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+        updateCarousel();
+    });
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
+    });
+    window.addEventListener('resize', updateCarousel); // Atualiza ao redimensionar
+    updateCarousel(); // Inicializa
+});
+</script>
+
 
 </body>
 </html>

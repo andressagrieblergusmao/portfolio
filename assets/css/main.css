@@ -3783,3 +3783,163 @@ input, select, textarea {
 			}
 
 		}
+/* Carousel */
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden; /* IMPORTANTE: esconde as outras imagens */
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+	width:100%;
+    flex-shrink: 0; /* Não encolhe */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    background: rgba(151, 150, 150, 0.3);
+    color: rgb(11, 11, 11);
+    padding: 15px;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.carousel-btn {
+    background: rgba(151, 150, 150, 0.3);
+    border: none;
+    color: rgb(11, 11, 11);
+    font-size: 32px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.carousel-btn:hover {
+    background: rgba(151, 150, 150, 0.3);
+}
+
+/* Container com 2 colunas lado a lado */
+.gallery-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+/* Cada coluna */
+.gallery-column {
+    width: 100%;
+}
+
+/* Divisão no meio */
+.gallery-divider {
+    background: linear-gradient(to bottom, transparent 10%, #ddd 50%, transparent 90%);
+    width: 1px;
+    height: 600px;
+}
+
+/* Carousel dentro das colunas */
+.gallery-column .carousel-container {
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Responsivo: em telas pequenas, fica um embaixo do outro */
+@media (max-width: 1024px) {
+    .gallery-two-columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .gallery-divider {
+        display: none;
+    }
+
+    .gallery-column h3 {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-two-columns {
+        gap: 40px;
+    }
+
+    .gallery-column {
+        width: 100%;
+    }
+}
+.explore-btn {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    padding: 16px 36px;
+    border-radius: 999px;
+
+    background: linear-gradient(90deg, #8E2DE2 0%, #FF4EDF 100%); /* roxo neon → rosa neon */
+    color: #ffffff !important;
+    text-decoration: none;
+
+    display: inline-block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 10px 26px rgba(200, 70, 255, 0.55); /* glow mais forte */
+    border: none;
+}
+
+.explore-btn:hover,
+.explore-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(200, 70, 255, 0.262);
+}
+.center-button {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.simple-btn {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #ffffff;
+    background-color: #96a0cb; /* azul arroxeado elegante */
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    letter-spacing: 0.3px;
+}
+
+.simple-btn:hover {
+    background-color: #8690ca; /* tom mais escuro no hover */
+    transform: translateY(-2px);
+}
