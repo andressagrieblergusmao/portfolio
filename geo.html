@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Geospatial Tools Tutorial</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1 style="font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 3em; letter-spacing: 0.01em; text-transform: uppercase; text-align: center; margin-bottom: 0.0em;">
+                Geospatial Tools
+            </h1>
+            <p>Google Earth & QGIS – practical workflows for mapping, analysis and visualization</p>
+        </header>
+
+        <!-- Nav (opcional; se quiser, pode remover) -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#google-earth">Google Earth</a></li>
+                <li><a href="#qgis-mapping">QGIS – Mapping</a></li>
+                <li><a href="#seg-solo">Land Use Segmentation</a></li>
+                <li><a href="#intersecao">Data Intersection</a></li>
+                <li><a href="#hipsometrico">Terrain Maps</a></li>
+                <li><a href="#histogramas">Histograms</a></li>
+                <li><a href="#cta">Back</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Intro -->
+            <section id="intro" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                                Geoprocessing Tutorials
+                            </h2>
+                        </header>
+                        <p>
+                            This page compiles practical workflows developed by Andressa using Google Earth Pro and QGIS.
+                            Each section documents a complete task—from data selection and layer creation to analysis and visualization—
+                            with a focus on environmental and land-use applications.
+                        </p>
+                        <p>
+                            The goal is to serve as a visual and didactic reference for students, collaborators, and professionals
+                            interested in applying geospatial tools to real research and monitoring projects.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GOOGLE EARTH -->
+            <section id="google-earth" class="main">
+                <div class="about-flex reverse">
+                    <div class="about-text">
+                        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                            Mapping with Google Earth Pro
+                        </h2>
+                        <p><strong>Objective:</strong> Compare land-use changes in a new allotment between 2008 and 2018 in São Miguel do Oeste–SC.</p>
+                        <h3>Step-by-step</h3>
+                        <ol>
+                            <li>Select the target area (the allotment finalized in 2018).</li>
+                            <li>Draw a polygon to delimit the total area of the territory.</li>
+                            <li>Draw polygons for each block inside the allotment.</li>
+                            <li>Draw paths for the streets of the area.</li>
+                        </ol>
+                        <ul>
+                            <li>Total area: 52,017 m².</li>
+                            <li>Sum of all blocks: ≈31,941 m².</li>
+                            <li>Street area (approx.): 52,017 − 31,941 ≈ 14,076 m².</li>
+                        </ul>
+                        <h3>Temporal analysis (2008 × 2018)</h3>
+                        <ol start="5">
+                            <li>Switch the imagery date to 2008 for the same territory.</li>
+                            <li>Using the 2018 total area polygon as reference (with lower opacity), delimit eucalyptus plantations.</li>
+                            <li>Delimit native forest area and adjust polygon overlap with eucalyptus and total terrain.</li>
+                            <li>Delimit the remaining area without vegetation (open field).</li>
+                        </ol>
+                        <ul>
+                            <li>Eucalyptus: 40,353 m².</li>
+                            <li>Native forest: 8,852 m².</li>
+                            <li>Open field: 2,949 m².</li>
+                            <li>Total territory (2008 composition): 52,154 m².</li>
+                        </ul>
+                    </div>
+                    <div class="about-img" style="text-align:center;">
+                        <span class="image">
+                            <img src="images/ge-earth-01.png" alt="Google Earth – total area and allotment mapping">
+                        </span>
+                        <p class="slide-caption">Total area, blocks and streets mapped in Google Earth Pro.</p>
+                        <span class="image" style="margin-top:18px;">
+                            <img src="images/ge-earth-02.png" alt="Google Earth – land cover comparison 2008 vs 2018">
+                        </span>
+                        <p class="slide-caption">Comparison of eucalyptus, native forest and open field between 2008 and 2018.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QGIS MAPPING -->
+            <section id="qgis-mapping" class="main">
+                <div class="about-flex reverse">
+                    <div class="about-text">
+                        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                            Mapping Areas with QGIS
+                        </h2>
+                        <p><strong>Objective:</strong> Import the allotment mapped in Google Earth into QGIS and compute areas and lengths with proper symbology.</p>
+                        <h3>Workflow</h3>
+                        <ol>
+                            <li>Import the KML/KMZ from Google Earth into QGIS.</li>
+                            <li>Install the QuickMapServices plugin and add an OSM Standard basemap.</li>
+                            <li>Calculate the area of each block polygon using the attribute table (field calculator).</li>
+                            <li>Open the statistics panel to obtain total area, mean, minimum and maximum values for blocks.</li>
+                            <li>Measure streets (line layer) and generate length statistics.</li>
+                        </ol>
+                        <h3>Symbology and data organization</h3>
+                        <ol start="6">
+                            <li>Adjust line and polygon styles to improve visualization (colors, thickness, transparency).</li>
+                            <li>Export non-quantitative features to new layers and rename attributes (e.g., QuadrasUR = residential blocks, QuadrasUM = mixed-use blocks).</li>
+                            <li>For quantitative data, apply graduated symbology (e.g., natural breaks / Jenks for block areas).</li>
+                            <li>For qualitative data, use categorized symbology to distinguish UR vs UM blocks.</li>
+                            <li>Add a Google Satellite layer and digitize additional polygons for surrounding trees and new features.</li>
+                            <li>Create a new line layer for the main road, digitize it and apply a distinct style.</li>
+                        </ol>
+                        <p>
+                            The final map combines quantitative (area classes) and qualitative (land-use categories) information
+                            in a single, readable layout.
+                        </p>
+                    </div>
+                    <div class="about-img" style="text-align:center;">
+                        <span class="image">
+                            <img src="images/qgis-map-01.png" alt="QGIS – block areas and statistics">
+                        </span>
+                        <p class="slide-caption">Block area calculation and statistics in QGIS.</p>
+                        <span class="image" style="margin-top:18px;">
+                            <img src="images/qgis-map-02.png" alt="QGIS – graduated and categorized symbology">
+                        </span>
+                        <p class="slide-caption">Graduated symbology for areas and categorized symbology for land-use.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEGMENTAÇÃO DE USO DO SOLO -->
+            <section id="seg-solo" class="main">
+                <div class="about-flex reverse">
+                    <div class="about-text">
+                        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                            Land-Use Segmentation with QGIS (dzetsaka)
+                        </h2>
+                        <p><strong>Objective:</strong> Create ALOS (land-use segments) from satellite imagery using semi-automatic classification in QGIS.</p>
+                        <h3>Preparation</h3>
+                        <ol>
+                            <li>Download the required raster and vector files for the study area.</li>
+                            <li>Install the <em>dzetsaka</em> classification plugin (requires scikit-learn).</li>
+                            <li>Create a new polygon shapefile for training samples and add a text field named de>classe</code>.</li>
+                        </ol>
+                        <h3>Training samples</h3>
+                        <ol start="4">
+                            <li>Digitize polygons over tree/forest areas and assign the class label (e.g., de>veg</code>).</li>
+                            <li>Repeat for bare soil polygons (de>sex</code> or similar class code).</li>
+                            <li>Create additional classes for agriculture types:
+                                <ul>
+                                    <li><strong>agr1</strong> – greener agriculture (with active crops).</li>
+                                    <li><strong>agr2</strong> – lighter agriculture (without visible crops).</li>
+                                </ul>
+                            </li>
+                            <li>Digitize polygons for pasture areas as another class.</li>
+                            <li>Update the attribute table so each training polygon has a consistent class label.</li>
+                        </ol>
+                        <h3>Classification and visualization</h3>
+                        <ol start="9">
+                            <li>Open dzetsaka, select the raster as input and the training shapefile as sample layer.</li>
+                            <li>Run the classification to generate a land-use raster.</li>
+                            <li>Customize colors for each class:
+                                trees (dark green), pasture (yellow), agriculture with crops (bright green),
+                                agriculture without crops (gray), bare soil (dark orange).</li>
+                        </ol>
+                        <p>
+                            Comparing the classified raster with the original satellite image shows that splitting agriculture
+                            into “with crops” vs “without crops” significantly improves the interpretation of land use.
+                        </p>
+                    </div>
+                    <div class="about-img" style="text-align:center;">
+                        <span class="image">
+                            <img src="images/seg-solo-01.png" alt="Training polygons by land-use class">
+                        </span>
+                        <p class="slide-caption">Training polygons for each land-use class.</p>
+                        <span class="image" style="margin-top:18px;">
+                            <img src="images/seg-solo-02.png" alt="Classified raster with customized colors">
+                        </span>
+                        <p class="slide-caption">Classified land-use raster using dzetsaka.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERSEÇÃO DE DADOS AMBIENTAIS -->
+            <section id="intersecao" class="main">
+                <div class="about-flex reverse">
+                    <div class="about-text">
+                        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                            Intersection of Environmental Layers in QGIS
+                        </h2>
+                        <p><strong>Guiding question:</strong> Which forest-cover polygons occur on soils of the Neosol type?</p>
+                        <h3>Layers used</h3>
+                        <ul>
+                            <li>Land use/cover layer (e.g., forest cover class).</li>
+                            <li>Soil map layer with soil classes, including Neosols.</li>
+                        </ul>
+                        <h3>Steps</h3>
+                        <ol>
+                            <li>Open both land-use and soil layers in QGIS.</li>
+                            <li>Filter the land-use attribute table to select only forest-cover polygons.</li>
+                            <li>Export the selected features to a new layer named, for example, de>solo_florestal</code>.</li>
+                            <li>In the soil layer, filter the attribute de>PRIMNIVEL</code> or equivalent to select Neosol units and export to a new layer de>neossolo</code>.</li>
+                            <li>Open the <strong>Intersection</strong> tool (Vector &gt; Geoprocessing Tools &gt; Intersection).</li>
+                            <li>Set de>solo_florestal</code> as the input layer and de>neossolo</code> as the overlay layer, then run the algorithm.</li>
+                        </ol>
+                        <p>
+                            The resulting intersection layer contains only polygons where forest cover and Neosol soils overlap,
+                            with attributes from both original datasets, allowing further area calculations and statistics.
+                        </p>
+                    </div>
+                    <div class="about-img" style="text-align:center;">
+                        <span class="image">
+                            <img src="images/intersecao-01.png" alt="Forest cover selection over land-use layer">
+                        </span>
+                        <p class="slide-caption">Selection of forest-cover polygons in the land-use layer.</p>
+                        <span class="image" style="margin-top:18px;">
+                            <img src="images/intersecao-02.png" alt="Intersection result layer in QGIS">
+                        </span>
+                        <p class="slide-caption">Intersection result: forest cover on Neosol soils.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAPA HIPSOMÉTRICO / CLINOGRÁFICO / SOMBREAMENTO -->
+            <section id="hipsometrico" class="main">
+                <div class="about-flex reverse">
+                    <div class="about-text">
+                        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                            Hypsometric, Slope and Shaded-Relief Maps
+                        </h2>
+                        <p><strong>Objective:</strong> Generate terrain-analysis products (altitude, slope and hillshade) from a DEM using QGIS.</p>
+                        <h3>DEM preparation</h3>
+                        <ol>
+                            <li>Download the elevation model (e.g., TOPODATA) for the study area.</li>
+                            <li>Load the raster DEM into QGIS and check its coordinate reference system.</li>
+                            <li>Adjust layer properties (color ramp, min/max values) to create a hypsometric map.</li>
+                        </ol>
+                        <h3>Profiles and hillshade</h3>
+                        <ol start="4">
+                            <li>Use the Profile Tool plugin (or Raster → Extraction → Profile) to generate topographic profiles along chosen transects.</li>
+                            <li>Open the Processing Toolbox and run a hillshade (shaded relief) algorithm from the “Raster terrain analysis” group.</li>
+                            <li>Zoom to areas of interest (e.g., river valleys) to inspect the relief representation.</li>
+                        </ol>
+                        <h3>Slope (clinographic map)</h3>
+                        <ol start="7">
+                            <li>Run the Slope tool (Raster terrain analysis) on the DEM to obtain slope values in degrees or percent.</li>
+                            <li>Apply a color ramp to highlight slope intervals (e.g., 0–19°, 19–38°, 38–57°, 57–76°).</li>
+                            <li>Combine hillshade and slope layers (using transparency) to produce a more intuitive terrain map.</li>
+                        </ol>
+                    </div>
+                    <div class="about-img" style="text-align:center;">
+                        <span class="image">
+                            <img src="images/hipso-01.png" alt="Hypsometric map and profile tool">
+                        </span>
+                        <p class="slide-caption">Hypsometric map and elevation profiles.</p>
+                        <span class="image" style="margin-top:18px;">
+                            <img src="images/hipso-02.png" alt="Hillshade and slope maps">
+                        </span>
+                        <p class="slide-caption">Hillshade and slope maps derived from the DEM.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HISTOGRAMAS -->
+            <section id="histogramas" class="main">
+                <div class="about-flex reverse">
+                    <div class="about-text">
+                        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                            Histograms with Custom Intervals
+                        </h2>
+                        <p><strong>Objective:</strong> Build histograms with manually defined class intervals for geospatial or environmental variables.</p>
+                        <h3>General idea</h3>
+                        <ol>
+                            <li>Export attribute data (e.g., areas, slope values, elevations) from QGIS to a table format (CSV or spreadsheet).</li>
+                            <li>Define custom class boundaries according to the analysis (for example, area size ranges or slope categories).</li>
+                            <li>Use a statistics tool (R, Python, Excel, etc.) to count the number of observations in each class.</li>
+                            <li>Plot the histogram using the predefined bins, ensuring that labels clearly reflect the custom intervals.</li>
+                        </ol>
+                        <p>
+                            These histograms help interpret the distribution of quantitative variables extracted from geospatial layers,
+                            such as the dominance of certain block sizes or slope ranges in the study area.
+                        </p>
+                    </div>
+                    <div class="about-img" style="text-align:center;">
+                        <span class="image">
+                            <img src="images/hist-01.png" alt="Example histogram with custom class intervals">
+                        </span>
+                        <p class="slide-caption">Example of histogram using manually defined bins.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section id="cta" class="main special" style="text-align:center;margin-top:40px;">
+                <header class="major">
+                    <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.7em;font-weight:700;letter-spacing:0.01em;color:#8a3a81;text-align:center;">
+                        Back to Portfolio
+                    </h2>
+                    <p>
+                        Return to the main portfolio to explore data analysis, geospatial projects and scientific outreach.
+                    </p>
+                </header>
+                <ul class="actions stacked" style="justify-content:center;margin-top:20px;">
+                    <li>
+                        <a href="https://andressagrieblergusmao.github.io/portfolio/"
+                           class="button" target="_blank">
+                            Go back to Andressa's portfolio
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </div><!-- /#main -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
