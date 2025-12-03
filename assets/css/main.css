@@ -3943,3 +3943,6 @@ input, select, textarea {
     background-color: #8690ca; /* tom mais escuro no hover */
     transform: translateY(-2px);
 }
+.justified-list li {
+  text-align: justify;
+}
