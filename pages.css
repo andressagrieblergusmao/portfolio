@@ -1,0 +1,241 @@
+/* ===========================================================
+   pages.css — estilos EXTRA só para as páginas internas
+   (about.html, journey.html, geo.html).
+   Carrega DEPOIS do style.css, por isso pode reaproveitar as
+   mesmas cores (var(--forest-700) etc.) e componentes.
+   =========================================================== */
+
+/* ---------- Topo (hero) mais baixo que o da página principal ---------- */
+.hero-sub { min-height: 62vh; min-height: 62svh; }
+.hero-sub .hero-content { padding: 8rem 0 17vh; }
+.hero-sub h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); margin-bottom: 1rem; }
+.hero-sub .trees.t1 { height: 40%; }
+.hero-sub .trees.t2 { height: 32%; }
+.hero-sub .trees.t3 { height: 22%; }
+.hero-sub .sun { top: 18%; }
+
+/* link da página atual no menu */
+.nav nav a.active::after { width: 100%; }
+
+/* ---------- Atalhos (pílulas) por baixo do topo ---------- */
+.pillnav { background: var(--sand-2); border-bottom: 1px solid var(--line); }
+.pillnav-in { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; padding: 1.1rem 0; }
+.pillnav a {
+  text-decoration: none; font-size: .88rem; font-weight: 600; color: var(--forest-700);
+  background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .4rem 1rem;
+  transition: background .25s, color .25s, border-color .25s;
+}
+.pillnav a:hover, .pillnav a.on { background: var(--forest-700); color: #fff; border-color: var(--forest-700); }
+
+/* ---------- Botões extra ---------- */
+.btn-outline { border: 1px solid var(--forest-700); color: var(--forest-700); background: transparent; }
+.btn-outline:hover { background: var(--forest-700); color: #fff; }
+.btn-row, .end-buttons { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+.end-buttons { justify-content: center; margin-top: 0; }
+
+/* ---------- ABOUT ---------- */
+.about-grid-rev { grid-template-columns: 1.2fr 1fr; }
+.photo-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); max-width: 420px; margin-inline: auto; }
+.photo-card img { width: 100%; height: auto; }
+.trajectory { background: var(--sand-2); }
+.education { background: var(--sand); }
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+.edu-card { background: #fff; border-radius: var(--radius); padding: 1.9rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.edu-card::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(var(--sage), transparent 70%); opacity: .35; }
+.edu-card h3 { font-size: 1.35rem; color: var(--forest-800); margin-bottom: .4rem; }
+.edu-card p { color: var(--ink-soft); }
+
+/* ---------- Blocos de conteúdo (Journey e Geo) ---------- */
+.block { padding: clamp(3.5rem, 7vw, 6rem) 0; position: relative; background: var(--sand); }
+.block.alt { background: var(--sand-2); }
+.block-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.block-num { display: block; font-family: var(--serif); font-size: clamp(3rem, 7vw, 4.8rem); line-height: 1; color: var(--sage); margin-bottom: .4rem; }
+.narrow { max-width: 820px; }
+.center-text { text-align: center; }
+.center-sub { margin-inline: auto; }
+.lead-dark { font-size: 1.12rem; color: var(--ink-soft); margin-bottom: 1.2rem; }
+
+.checklist { list-style: none; display: grid; gap: .65rem; margin: 1.2rem 0 1.4rem; }
+.checklist li { position: relative; padding-left: 1.5rem; color: var(--ink-soft); }
+.checklist li::before { content: ""; position: absolute; left: 0; top: .6em; width: 10px; height: 10px; background: var(--forest-500); border-radius: 0 100% 0 100%; }
+
+.link-list { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; }
+.link-list a {
+  display: inline-flex; align-items: center; gap: .4rem; text-decoration: none;
+  font-weight: 600; font-size: .9rem; color: var(--forest-700);
+  border: 1px solid var(--forest-500); border-radius: 999px; padding: .4rem 1rem;
+  transition: background .25s, color .25s;
+}
+.link-list a::after { content: "↗"; }
+.link-list a:hover { background: var(--forest-700); color: #fff; border-color: var(--forest-700); }
+
+/* ---------- Mosaico de fotos (clicáveis) ---------- */
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(135px, 1fr)); gap: .7rem; }
+.photos img, .fig-grid img { cursor: zoom-in; transition: transform .35s, box-shadow .35s; }
+.photos img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; background: var(--mist); box-shadow: 0 6px 16px -12px rgba(0, 0, 0, .5); }
+.photos img:hover { transform: scale(1.04); box-shadow: var(--shadow); }
+.photos-2 { grid-template-columns: repeat(2, 1fr); margin-top: 1.2rem; }
+
+/* ---------- Cartões a/b/c (projetos UTFPR) ---------- */
+.sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; margin-top: 2.2rem; }
+.sub-card { background: #fff; border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: .9rem; }
+.sub-letter { width: 36px; height: 36px; border-radius: 50%; background: var(--forest-700); color: #fff; display: grid; place-items: center; font-family: var(--serif); font-weight: 600; text-transform: uppercase; }
+.sub-card h3 { font-size: 1.2rem; color: var(--forest-800); }
+.sub-card p { color: var(--ink-soft); font-size: .96rem; }
+
+/* ---------- Lista numerada de links ---------- */
+.numlist { list-style: none; counter-reset: n; margin-top: 1.8rem; display: grid; gap: .7rem; }
+.numlist li { counter-increment: n; }
+.numlist a {
+  display: flex; align-items: center; gap: 1rem; text-decoration: none; background: #fff;
+  border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.2rem; color: var(--ink);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.numlist a::before { content: counter(n); flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--mist); color: var(--forest-700); font-weight: 700; }
+.numlist a span { flex: 1; }
+.numlist a .ico { color: var(--forest-500); transition: transform .25s; }
+.numlist a:hover { transform: translateX(4px); box-shadow: var(--shadow); border-color: var(--forest-500); }
+.numlist a:hover .ico { transform: translateX(4px); }
+
+/* ---------- GEO: passos e figuras ---------- */
+.objective { background: #fff; border-left: 4px solid var(--forest-500); border-radius: 0 12px 12px 0; padding: 1rem 1.3rem; color: var(--ink-soft); margin-bottom: 2rem; }
+.note { display: flex; align-items: center; gap: .6rem; background: #fff; border: 1px dashed var(--forest-500); border-radius: 12px; padding: .8rem 1.1rem; color: var(--forest-700); font-size: .95rem; }
+.step-card { background: #fff; border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); box-shadow: var(--shadow); margin-bottom: 1.5rem; }
+.step-card h3 { display: flex; align-items: center; gap: .8rem; font-size: 1.3rem; color: var(--forest-800); margin-bottom: .6rem; }
+.step-card p { color: var(--ink-soft); margin-bottom: 1rem; }
+.step-card code { background: var(--sand-2); padding: .1rem .45rem; border-radius: 6px; font-size: .9em; color: var(--forest-700); }
+.step-no { flex: none; min-width: 42px; height: 42px; padding: 0 .6rem; border-radius: 21px; background: linear-gradient(135deg, var(--forest-500), var(--forest-800)); color: #fff; display: grid; place-items: center; font-size: .95rem; font-family: var(--sans); font-weight: 700; }
+.measures { display: flex; flex-wrap: wrap; gap: .6rem; margin: .4rem 0 1.4rem; }
+.measure { background: var(--sand-2); border: 1px solid #d5e2cf; border-radius: 999px; padding: .35rem 1rem; font-size: .9rem; color: var(--ink-soft); }
+.measure b { color: var(--forest-700); margin-right: .25rem; }
+.steps { margin: .5rem 0 1.2rem 1.3rem; display: grid; gap: .4rem; color: var(--ink-soft); }
+.steps li::marker { color: var(--forest-500); font-weight: 700; }
+.fig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; margin-top: .6rem; }
+.fig-grid-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.fig-grid figure { margin: 0; }
+.fig-grid img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: var(--mist); }
+.fig-grid img:hover { transform: scale(1.02); box-shadow: var(--shadow); }
+.fig-grid figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: .35rem; }
+
+/* ---------- Ampliar foto (lightbox) ---------- */
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(8, 23, 15, .92); display: none; align-items: center; justify-content: center; flex-direction: column; gap: .8rem; padding: 3.5rem 1rem 2rem; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: min(1100px, 94vw); max-height: 78vh; object-fit: contain; border-radius: 10px; box-shadow: 0 20px 60px rgba(0, 0, 0, .5); }
+.lightbox p { color: #cfe0d4; font-size: .9rem; min-height: 1.2em; text-align: center; }
+.lb-btn { position: absolute; background: rgba(255, 255, 255, .12); color: #fff; border: 0; cursor: pointer; width: 46px; height: 46px; border-radius: 50%; font-size: 1.6rem; line-height: 1; display: grid; place-items: center; transition: background .25s; }
+.lb-btn:hover { background: rgba(255, 255, 255, .28); }
+.lb-close { top: 1rem; right: 1rem; }
+.lb-prev { left: 1rem; top: 50%; }
+.lb-next { right: 1rem; top: 50%; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 860px) {
+  .about-grid-rev { grid-template-columns: 1fr; }
+  .block-grid { grid-template-columns: 1fr; }
+  .hero-sub .hero-content { padding-bottom: 20vh; }
+  .lb-prev, .lb-next { top: auto; bottom: 1rem; }
+  .lb-prev { left: calc(50% - 56px); }
+  .lb-next { right: calc(50% - 56px); }
+}
+
+/* ===========================================================
+   TOPOS ILUSTRADOS (um tema por página), com fundo CLARO e
+   letras ESCURAS.
+     • .hero-about   → livros (verde amarelado, mais quente)
+     • .hero-journey → colinas e caminho (verde fresco)
+     • .hero-geo     → terreno, solo e natureza (verde frio, azulado)
+   =========================================================== */
+
+/* Menu com letras escuras enquanto está sobre o topo claro */
+.page-light .nav:not(.scrolled) { color: var(--forest-800); }
+.page-light .nav:not(.scrolled) .brand .ico { color: var(--forest-500); }
+.page-light .nav:not(.scrolled) .btn-nav { border-color: var(--forest-700); }
+
+/* Base dos topos claros */
+.hero-light { color: var(--forest-900); }
+.hero-light .eyebrow { color: var(--forest-700); }
+.hero-light h1 { color: var(--forest-900); }
+.hero-light h1 em { color: var(--forest-500); }
+.hero-light .lead { color: var(--ink-soft); text-shadow: none; }
+.hero-light .leaf-fall { filter: brightness(.7) saturate(1.35); opacity: .75; }
+.hs-chips { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.6rem; max-width: none !important; }
+.hs-chips li { display: inline-flex; align-items: center; gap: .45rem; font-size: .85rem; font-weight: 600; color: var(--forest-700); background: rgba(255, 255, 255, .72); border: 1px solid rgba(20, 53, 42, .14); padding: .4rem .95rem; border-radius: 999px; }
+.hs-chips .ico { color: var(--forest-500); }
+
+/* manchas de cor suaves ao fundo (mexem com o parallax) */
+.blobs { inset: 0; height: 100%; }
+.hero-about   { background: linear-gradient(180deg, #f6f3dc 0%, #e6eec9 100%); }
+.hero-journey { background: linear-gradient(180deg, #e8f2e4 0%, #d2e7d2 100%); }
+.hero-geo     { background: linear-gradient(180deg, #e4f1ef 0%, #cde6e0 100%); }
+.hero-about .blobs   { background: radial-gradient(circle at 12% 22%, rgba(201, 217, 134, .55), transparent 42%), radial-gradient(circle at 88% 78%, rgba(143, 191, 90, .28), transparent 40%); }
+.hero-journey .blobs { background: radial-gradient(circle at 85% 18%, rgba(255, 255, 255, .7), transparent 36%), radial-gradient(circle at 10% 70%, rgba(127, 183, 138, .3), transparent 40%); }
+.hero-geo .blobs     { background: radial-gradient(circle at 10% 25%, rgba(255, 255, 255, .65), transparent 38%), radial-gradient(circle at 90% 85%, rgba(95, 158, 148, .25), transparent 42%); }
+
+/* ---------- Topo com texto à esquerda e ilustração à direita ---------- */
+.hero-about, .hero-geo { min-height: 78vh; min-height: 78svh; }
+.hero-split {
+  position: relative; z-index: 3; width: min(1120px, 92%); margin-inline: auto;
+  display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center;
+  padding: 7.5rem 0 4rem;
+}
+.hero-split .hs-text > * { max-width: 520px; }
+.hero-split h1 { font-size: clamp(2.6rem, 5.6vw, 4.4rem); margin-bottom: 1rem; }
+.hero-art svg { display: block; width: 100%; height: auto; max-height: 70vh; }
+.hero-art .cloud { animation: cfloat 9s ease-in-out infinite alternate; }
+.hero-art g:nth-of-type(n) .cloud { animation-delay: -3s; }
+@keyframes cfloat { from { transform: translateX(-12px); } to { transform: translateX(14px); } }
+.pin-pulse { transform-box: fill-box; transform-origin: center; animation: pinpulse 2.6s ease-out infinite; }
+@keyframes pinpulse { 0% { transform: scale(.4); opacity: .6; } 100% { transform: scale(2.6); opacity: 0; } }
+
+/* ---------- About: foto + capítulos ---------- */
+.intro-grid { display: grid; grid-template-columns: .8fr 1.4fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.intro-photo { position: sticky; top: 6.5rem; max-width: 380px; margin-inline: auto; }
+.chapters { list-style: none; margin-top: 2rem; display: grid; gap: 2.2rem; counter-reset: ch; position: relative; }
+.chapters::before { content: ""; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--sage), var(--mist)); }
+.chapters li { position: relative; padding-left: 2.8rem; }
+.chapters li::before { content: ""; position: absolute; left: 0; top: .35rem; width: 24px; height: 24px; border-radius: 50%; background: var(--sand); border: 3px solid var(--forest-500); }
+.chap-n { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--forest-500); }
+.chapters h3 { font-size: 1.5rem; color: var(--forest-800); margin: .2rem 0 .6rem; }
+.chapters p { color: var(--ink-soft); }
+
+/* ---------- Journey: colinas no fundo + linha do tempo ---------- */
+.hero-journey { min-height: 88vh; min-height: 88svh; }
+.hero-journey .hero-content { padding: 8rem 0 30vh; }
+.hero-journey .hero-content > .milestones { max-width: none; }
+.j-art { bottom: 0; height: 36%; }
+.j-art svg { display: block; width: 100%; height: 100%; }
+.clouds-j { top: 0; height: 300px; }
+.clouds-j .cloud { animation: cfloat 11s ease-in-out infinite alternate; }
+.milestones { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.4rem; position: relative; }
+.milestones::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: rgba(20, 53, 42, .28); }
+.milestones li { position: relative; padding-top: 1.7rem; }
+.milestones li::before { content: ""; position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 4px solid var(--forest-700); }
+.milestones b { display: block; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--forest-900); }
+.milestones small { display: block; font-size: .86rem; line-height: 1.4; color: var(--ink-soft); }
+.bird { position: absolute; width: 26px; fill: none; stroke: rgba(31, 74, 57, .7); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; animation: drift 50s linear infinite; pointer-events: none; }
+.bird.b1 { top: 15%; }
+.bird.b2 { top: 10%; width: 18px; animation-duration: 66s; animation-delay: -24s; }
+@keyframes drift { from { transform: translateX(-8vw); } to { transform: translateX(108vw); } }
+
+/* ---------- Final de página (versão clara) ---------- */
+.end-light { background: linear-gradient(180deg, #eef3e1 0%, #dce9cf 100%); color: var(--forest-900); }
+.end-light h2 { color: var(--forest-800); }
+.end-light h2 em { color: var(--forest-500); }
+.end-light .contact-box > p { color: var(--ink-soft); }
+.end-light .tag { color: var(--forest-500); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 860px) {
+  .hero-split { grid-template-columns: 1fr; padding-top: 6.5rem; }
+  .hero-art { max-width: 520px; margin-inline: auto; }
+  .intro-grid { grid-template-columns: 1fr; }
+  .intro-photo { position: static; max-width: 300px; }
+  .milestones { grid-template-columns: repeat(2, 1fr); row-gap: 1.6rem; }
+  .milestones::before { display: none; }
+  .milestones li::before { top: 2px; }
+  .hero-journey .hero-content { padding-bottom: 26vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bird, .pin-pulse, .cloud { animation: none; }
+}

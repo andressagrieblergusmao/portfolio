@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andressa&#x27;s Journey · Projects &amp; Research</title>
+  <meta name="description" content="Detailed professional and academic journey of Andressa Griebler Gusmão: BIOPRODUCT, HARVEST, Forest Water Up, master thesis and scientific projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <!-- style.css = estilos gerais (os mesmos do index). pages.css = extras só destas páginas internas. -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="page-light">
+
+<!-- Biblioteca de ícones: igual à do index.html (lá está explicada passo a passo). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 4 10 4 16c0 2.5 1.5 4 4 4 7 0 12-6 12-16z"/><path d="M4 21c3-6 7-10 12-13"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c4 5 6.5 8 6.5 11a6.5 6.5 0 0 1-13 0C5.5 11 8 8 12 3z"/><path d="M9 15a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-pine" viewBox="0 0 24 24"><path d="M12 2l5 7h-3l4.5 6H14l3 4H7l3-4H5.500L10 9H7z"/><path d="M12 19v3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M12 13c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 11c0-3 2-5 6-5 0 3-2 5-6 5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.900 4.900l2.100 2.100M17 17l2.100 2.100M4.900 19.100L7 17M17 7l2.100-2.100"/></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24"><path d="M7 19l-3-5h4M4 14l3-5 3 1M17 5l3 5h-4M20 10l-3 5-3-1M8 5h6l-2-3M12 22l2-3H8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-grain" viewBox="0 0 24 24"><path d="M12 22V8"/><path d="M12 8c-2-1-3-3-3-5 2 1 3 3 3 5zM12 8c2-1 3-3 3-5-2 1-3 3-3 5zM12 14c-2-1-3-3-3-5 2 1 3 3 3 5zM12 14c2-1 3-3 3-5-2 1-3 3-3 5z"/></symbol>
+  </defs>
+</svg>
+
+<!-- MENU: igual ao do index, mas os links levam às outras páginas.
+     A página atual fica com class="active" (linha por baixo do nome). -->
+<header class="nav" id="nav">
+  <a href="index.html" class="brand"><svg class="ico"><use href="#i-leaf"/></svg><span>Andressa G.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  <nav id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="journey.html" class="active" aria-current="page">Journey</a>
+    <a href="geo.html">Geo Tools</a>
+    <a href="index.html#contact" class="btn-nav">Contact</a>
+  </nav>
+</header>
+
+<!-- Indicador de progresso lateral (linha + folha que desce ao fazer scroll) -->
+<div class="grow" aria-hidden="true">
+  <div class="grow-trunk"><div class="grow-fill" id="growFill"></div></div>
+  <svg class="ico grow-leaf" id="growLeaf"><use href="#i-leaf"/></svg>
+</div>
+
+<!-- ============ TOPO DA PÁGINA JOURNEY: colinas e caminho ============
+     Fundo claro verde-fresco, texto escuro. A linha do tempo (4 marcos)
+     resume o percurso. Colinas, árvores e o caminho são um SVG no fundo. -->
+<section class="hero hero-sub hero-light hero-journey" id="top">
+  <div class="layer blobs" data-speed="0.4"></div>
+  <svg class="layer clouds-j" data-speed="0.4" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><g transform="translate(210 110) scale(1.5)"><g class="cloud"><g fill="#ffffff" stroke="rgba(47,111,105,.16)" stroke-width="1.2"><rect x="-44" y="-8" width="88" height="24" rx="12"/><circle cx="-14" cy="-12" r="17"/><circle cx="14" cy="-18" r="21"/></g><rect x="-40" y="-6" width="80" height="20" rx="10" fill="#ffffff"/></g></g><g transform="translate(1110 135) scale(1.2)"><g class="cloud"><g fill="#ffffff" stroke="rgba(47,111,105,.16)" stroke-width="1.2"><rect x="-44" y="-8" width="88" height="24" rx="12"/><circle cx="-14" cy="-12" r="17"/><circle cx="14" cy="-18" r="21"/></g><rect x="-40" y="-6" width="80" height="20" rx="10" fill="#ffffff"/></g></g><g transform="translate(1330 210) scale(0.9)"><g class="cloud"><g fill="#ffffff" stroke="rgba(47,111,105,.16)" stroke-width="1.2"><rect x="-44" y="-8" width="88" height="24" rx="12"/><circle cx="-14" cy="-12" r="17"/><circle cx="14" cy="-18" r="21"/></g><rect x="-40" y="-6" width="80" height="20" rx="10" fill="#ffffff"/></g></g></svg>
+  <svg class="bird b1" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 8Q7 0 12 6Q17 0 23 8"/></svg>
+  <svg class="bird b2" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 8Q7 0 12 6Q17 0 23 8"/></svg>
+  <div class="layer j-art" data-speed="0.1">
+    <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M-12.0 193.8L0.0 195.3L12.0 196.2L24.0 196.4L36.0 196.2L48.0 195.6L60.0 194.6L72.0 193.5L84.0 192.2L96.0 191.0L108.0 189.9L120.0 189.0L132.0 188.3L144.0 188.0L156.0 188.1L168.0 188.4L180.0 189.1L192.0 190.1L204.0 191.3L216.0 192.5L228.0 193.8L240.0 195.0L252.0 195.9L264.0 196.5L276.0 196.7L288.0 196.3L300.0 195.4L312.0 193.8L324.0 191.6L336.0 188.8L348.0 185.3L360.0 181.3L372.0 176.9L384.0 172.1L396.0 167.1L408.0 162.0L420.0 157.0L432.0 152.1L444.0 147.6L456.0 143.5L468.0 140.0L480.0 137.2L492.0 135.0L504.0 133.6L516.0 132.9L528.0 133.0L540.0 133.7L552.0 135.0L564.0 136.8L576.0 139.0L588.0 141.5L600.0 144.1L612.0 146.8L624.0 149.3L636.0 151.7L648.0 153.8L660.0 155.6L672.0 157.0L684.0 158.0L696.0 158.7L708.0 159.0L720.0 159.0L732.0 158.9L744.0 158.6L756.0 158.3L768.0 158.2L780.0 158.2L792.0 158.6L804.0 159.3L816.0 160.5L828.0 162.2L840.0 164.5L852.0 167.2L864.0 170.5L876.0 174.1L888.0 178.2L900.0 182.4L912.0 186.9L924.0 191.3L936.0 195.6L948.0 199.6L960.0 203.2L972.0 206.3L984.0 208.8L996.0 210.6L1008.0 211.6L1020.0 211.8L1032.0 211.3L1044.0 210.0L1056.0 208.0L1068.0 205.4L1080.0 202.2L1092.0 198.7L1104.0 194.9L1116.0 190.9L1128.0 186.9L1140.0 183.1L1152.0 179.4L1164.0 176.1L1176.0 173.2L1188.0 170.8L1200.0 168.8L1212.0 167.3L1224.0 166.2L1236.0 165.5L1248.0 165.2L1260.0 165.1L1272.0 165.1L1284.0 165.2L1296.0 165.2L1308.0 165.1L1320.0 164.7L1332.0 163.9L1344.0 162.8L1356.0 161.3L1368.0 159.4L1380.0 157.0L1392.0 154.3L1404.0 151.4L1416.0 148.2L1428.0 145.0L1440.0 141.8L1452.0 138.7L1452 420L-12 420Z" fill="#c9e2cb"/><g><rect x="56.3" y="181.5" width="3.0" height="19.3" fill="#5f7f3c"/><circle cx="49.7" cy="181.9" r="8.0" fill="#a9d0ae"/><circle cx="65.8" cy="181.9" r="8.0" fill="#a9d0ae"/><circle cx="57.8" cy="176.9" r="10.0" fill="#9bc7a1"/><circle cx="54.8" cy="173.4" r="5.0" fill="#9bc7a1" opacity=".55"/></g><g><rect x="162.9" y="186.4" width="3.0" height="7.9" fill="#5f7f3c"/><path d="M164.4 171.5L177.6 188.2L151.3 188.2Z" fill="#9bc7a1"/><path d="M164.4 161.0L175.0 180.3L153.9 180.3Z" fill="#a9d0ae"/><path d="M164.4 150.5L171.9 170.6L157.0 170.6Z" fill="#9bc7a1"/></g><g><rect x="207.4" y="191.5" width="3.0" height="6.3" fill="#5f7f3c"/><path d="M208.9 179.6L219.4 192.9L198.4 192.9Z" fill="#9bc7a1"/><path d="M208.9 171.2L217.3 186.6L200.5 186.6Z" fill="#a9d0ae"/><path d="M208.9 162.8L214.8 178.9L202.9 178.9Z" fill="#9bc7a1"/></g><g><rect x="314.1" y="179.2" width="3.0" height="20.1" fill="#5f7f3c"/><circle cx="307.2" cy="179.6" r="8.4" fill="#a9d0ae"/><circle cx="323.9" cy="179.6" r="8.4" fill="#a9d0ae"/><circle cx="315.6" cy="174.4" r="10.4" fill="#9bc7a1"/><circle cx="312.4" cy="170.7" r="5.2" fill="#9bc7a1" opacity=".55"/></g><g><rect x="358.5" y="179.2" width="3.0" height="8.2" fill="#5f7f3c"/><path d="M360.0 163.8L373.6 181.0L346.4 181.0Z" fill="#9bc7a1"/><path d="M360.0 152.9L370.9 172.8L349.1 172.8Z" fill="#a9d0ae"/><path d="M360.0 142.0L367.7 162.9L352.3 162.9Z" fill="#9bc7a1"/></g><g><rect x="465.2" y="139.8" width="3.0" height="6.6" fill="#5f7f3c"/><path d="M466.7 127.4L477.6 141.3L455.7 141.3Z" fill="#9bc7a1"/><path d="M466.7 118.6L475.4 134.7L457.9 134.7Z" fill="#a9d0ae"/><path d="M466.7 109.9L472.9 126.7L460.5 126.7Z" fill="#9bc7a1"/></g><g><rect x="571.8" y="123.7" width="3.0" height="20.9" fill="#5f7f3c"/><circle cx="564.7" cy="124.1" r="8.7" fill="#a9d0ae"/><circle cx="582.0" cy="124.1" r="8.7" fill="#a9d0ae"/><circle cx="573.3" cy="118.7" r="10.8" fill="#9bc7a1"/><circle cx="570.1" cy="114.9" r="5.4" fill="#9bc7a1" opacity=".55"/></g><g><rect x="616.3" y="145.6" width="3.0" height="8.4" fill="#5f7f3c"/><path d="M617.8 129.6L631.8 147.5L603.7 147.5Z" fill="#9bc7a1"/><path d="M617.8 118.4L629.0 139.0L606.5 139.0Z" fill="#a9d0ae"/><path d="M617.8 107.1L625.7 128.7L609.8 128.7Z" fill="#9bc7a1"/></g><g><rect x="722.9" y="158.1" width="3.0" height="6.9" fill="#5f7f3c"/><path d="M724.4 145.2L735.9 159.7L713.0 159.7Z" fill="#9bc7a1"/><path d="M724.4 136.1L733.6 152.8L715.3 152.8Z" fill="#a9d0ae"/><path d="M724.4 126.9L730.9 144.4L718.0 144.4Z" fill="#9bc7a1"/></g><g><rect x="767.4" y="142.5" width="3.0" height="21.6" fill="#5f7f3c"/><circle cx="759.9" cy="143.0" r="9.0" fill="#a9d0ae"/><circle cx="777.9" cy="143.0" r="9.0" fill="#a9d0ae"/><circle cx="768.9" cy="137.4" r="11.2" fill="#9bc7a1"/><circle cx="765.5" cy="133.4" r="5.6" fill="#9bc7a1" opacity=".55"/></g><g><rect x="874.1" y="173.8" width="3.0" height="6.2" fill="#5f7f3c"/><path d="M875.6 162.1L885.9 175.2L865.2 175.2Z" fill="#9bc7a1"/><path d="M875.6 153.8L883.8 169.0L867.3 169.0Z" fill="#a9d0ae"/><path d="M875.6 145.6L881.4 161.4L869.7 161.4Z" fill="#9bc7a1"/></g><g><rect x="918.5" y="188.7" width="3.0" height="7.1" fill="#5f7f3c"/><path d="M920.0 175.2L931.9 190.3L908.1 190.3Z" fill="#9bc7a1"/><path d="M920.0 165.7L929.5 183.1L910.5 183.1Z" fill="#a9d0ae"/><path d="M920.0 156.2L926.7 174.4L913.3 174.4Z" fill="#9bc7a1"/></g><g><rect x="1025.1" y="195.2" width="3.1" height="22.4" fill="#5f7f3c"/><circle cx="1017.4" cy="195.7" r="9.3" fill="#a9d0ae"/><circle cx="1036.0" cy="195.7" r="9.3" fill="#a9d0ae"/><circle cx="1026.7" cy="189.9" r="11.6" fill="#9bc7a1"/><circle cx="1023.2" cy="185.8" r="5.8" fill="#9bc7a1" opacity=".55"/></g><g><rect x="1131.8" y="184.7" width="3.0" height="6.5" fill="#5f7f3c"/><path d="M1133.3 172.5L1144.1 186.2L1122.5 186.2Z" fill="#9bc7a1"/><path d="M1133.3 163.9L1142.0 179.7L1124.7 179.7Z" fill="#a9d0ae"/><path d="M1133.3 155.2L1139.4 171.8L1127.2 171.8Z" fill="#9bc7a1"/></g><g><rect x="1176.3" y="171.4" width="3.0" height="7.4" fill="#5f7f3c"/><path d="M1177.8 157.4L1190.1 173.1L1165.4 173.1Z" fill="#9bc7a1"/><path d="M1177.8 147.6L1187.7 165.7L1167.9 165.7Z" fill="#a9d0ae"/><path d="M1177.8 137.7L1184.8 156.6L1170.8 156.6Z" fill="#9bc7a1"/></g><g><rect x="1282.8" y="148.1" width="3.2" height="23.2" fill="#5f7f3c"/><circle cx="1274.8" cy="148.5" r="9.6" fill="#a9d0ae"/><circle cx="1294.1" cy="148.5" r="9.6" fill="#a9d0ae"/><circle cx="1284.4" cy="142.5" r="12.0" fill="#9bc7a1"/><circle cx="1280.8" cy="138.3" r="6.0" fill="#9bc7a1" opacity=".55"/></g><g><rect x="1327.4" y="163.4" width="3.0" height="6.8" fill="#5f7f3c"/><path d="M1328.9 150.7L1340.1 164.9L1317.6 164.9Z" fill="#9bc7a1"/><path d="M1328.9 141.7L1337.9 158.2L1319.9 158.2Z" fill="#a9d0ae"/><path d="M1328.9 132.7L1335.3 149.9L1322.5 149.9Z" fill="#9bc7a1"/></g><path d="M-12.0 268.1L0.0 267.9L12.0 266.9L24.0 264.9L36.0 262.2L48.0 258.5L60.0 254.1L72.0 249.1L84.0 243.6L96.0 237.8L108.0 231.9L120.0 226.0L132.0 220.5L144.0 215.3L156.0 210.8L168.0 207.0L180.0 204.1L192.0 201.9L204.0 200.5L216.0 199.9L228.0 200.0L240.0 200.6L252.0 201.6L264.0 202.9L276.0 204.3L288.0 205.7L300.0 206.9L312.0 207.9L324.0 208.6L336.0 209.0L348.0 209.0L360.0 208.9L372.0 208.6L384.0 208.2L396.0 208.0L408.0 208.0L420.0 208.4L432.0 209.3L444.0 210.8L456.0 212.9L468.0 215.8L480.0 219.4L492.0 223.7L504.0 228.5L516.0 233.8L528.0 239.3L540.0 245.0L552.0 250.6L564.0 255.9L576.0 260.7L588.0 264.9L600.0 268.3L612.0 270.8L624.0 272.5L636.0 273.1L648.0 272.9L660.0 271.8L672.0 269.9L684.0 267.5L696.0 264.6L708.0 261.5L720.0 258.2L732.0 255.1L744.0 252.0L756.0 249.3L768.0 247.0L780.0 245.0L792.0 243.5L804.0 242.3L816.0 241.3L828.0 240.5L840.0 239.8L852.0 239.0L864.0 237.9L876.0 236.5L888.0 234.7L900.0 232.4L912.0 229.5L924.0 226.2L936.0 222.3L948.0 218.1L960.0 213.6L972.0 209.0L984.0 204.4L996.0 200.1L1008.0 196.2L1020.0 192.9L1032.0 190.4L1044.0 188.8L1056.0 188.0L1068.0 188.3L1080.0 189.6L1092.0 191.7L1104.0 194.7L1116.0 198.5L1128.0 202.7L1140.0 207.3L1152.0 212.1L1164.0 216.9L1176.0 221.5L1188.0 225.8L1200.0 229.7L1212.0 233.0L1224.0 235.8L1236.0 238.0L1248.0 239.7L1260.0 241.0L1272.0 242.0L1284.0 242.7L1296.0 243.3L1308.0 244.0L1320.0 244.9L1332.0 246.0L1344.0 247.5L1356.0 249.3L1368.0 251.6L1380.0 254.1L1392.0 256.9L1404.0 259.9L1416.0 262.8L1428.0 265.6L1440.0 268.1L1452.0 270.1L1452 420L-12 420Z" fill="#aed3b2"/><g><rect x="38.1" y="255.4" width="3.9" height="11.6" fill="#5f7f3c"/><path d="M40.0 233.5L59.3 258.0L20.7 258.0Z" fill="#6fae7d"/><path d="M40.0 218.0L55.5 246.4L24.5 246.4Z" fill="#7fb78a"/><path d="M40.0 202.6L51.0 232.2L29.0 232.2Z" fill="#6fae7d"/></g><g><rect x="129.2" y="218.2" width="3.0" height="8.9" fill="#5f7f3c"/><path d="M130.7 201.4L145.5 220.1L115.9 220.1Z" fill="#6fae7d"/><path d="M130.7 189.5L142.5 211.3L118.8 211.3Z" fill="#7fb78a"/><path d="M130.7 177.7L139.1 200.4L122.3 200.4Z" fill="#6fae7d"/></g><g><rect x="219.3" y="176.8" width="4.1" height="29.1" fill="#5f7f3c"/><circle cx="209.2" cy="177.3" r="12.1" fill="#7fb78a"/><circle cx="233.4" cy="177.3" r="12.1" fill="#7fb78a"/><circle cx="221.3" cy="169.8" r="15.1" fill="#6fae7d"/><circle cx="216.8" cy="164.5" r="7.6" fill="#6fae7d" opacity=".55"/></g><g><rect x="310.0" y="201.8" width="4.0" height="12.1" fill="#5f7f3c"/><path d="M312.0 179.0L332.1 204.5L291.9 204.5Z" fill="#6fae7d"/><path d="M312.0 162.9L328.1 192.4L295.9 192.4Z" fill="#7fb78a"/><path d="M312.0 146.8L323.4 177.7L300.6 177.7Z" fill="#6fae7d"/></g><g><rect x="401.1" y="204.6" width="3.1" height="9.4" fill="#5f7f3c"/><path d="M402.7 186.9L418.3 206.7L387.1 206.7Z" fill="#6fae7d"/><path d="M402.7 174.4L415.1 197.3L390.2 197.3Z" fill="#7fb78a"/><path d="M402.7 162.0L411.5 185.9L393.8 185.9Z" fill="#6fae7d"/></g><g><rect x="491.2" y="199.7" width="4.3" height="30.4" fill="#5f7f3c"/><circle cx="480.7" cy="200.3" r="12.7" fill="#7fb78a"/><circle cx="506.0" cy="200.3" r="12.7" fill="#7fb78a"/><circle cx="493.3" cy="192.4" r="15.8" fill="#6fae7d"/><circle cx="488.6" cy="186.9" r="7.9" fill="#6fae7d" opacity=".55"/></g><g><rect x="581.9" y="257.0" width="4.2" height="12.6" fill="#5f7f3c"/><path d="M584.0 233.3L604.9 259.8L563.1 259.8Z" fill="#6fae7d"/><path d="M584.0 216.6L600.7 247.2L567.3 247.2Z" fill="#7fb78a"/><path d="M584.0 199.8L595.9 231.9L572.1 231.9Z" fill="#6fae7d"/></g><g><rect x="673.0" y="265.6" width="3.3" height="9.8" fill="#5f7f3c"/><path d="M674.7 247.0L691.1 267.8L658.3 267.8Z" fill="#6fae7d"/><path d="M674.7 233.9L687.8 258.0L661.6 258.0Z" fill="#7fb78a"/><path d="M674.7 220.8L684.0 245.9L665.4 245.9Z" fill="#6fae7d"/></g><g><rect x="763.1" y="221.7" width="4.4" height="31.8" fill="#5f7f3c"/><circle cx="752.1" cy="222.4" r="13.2" fill="#7fb78a"/><circle cx="778.5" cy="222.4" r="13.2" fill="#7fb78a"/><circle cx="765.3" cy="214.1" r="16.5" fill="#6fae7d"/><circle cx="760.4" cy="208.3" r="8.3" fill="#6fae7d" opacity=".55"/></g><g><rect x="854.5" y="235.9" width="3.0" height="8.7" fill="#5f7f3c"/><path d="M856.0 219.5L870.5 237.9L841.5 237.9Z" fill="#6fae7d"/><path d="M856.0 207.9L867.6 229.2L844.4 229.2Z" fill="#7fb78a"/><path d="M856.0 196.3L864.2 218.5L847.8 218.5Z" fill="#6fae7d"/></g><g><rect x="944.9" y="214.2" width="3.4" height="10.3" fill="#5f7f3c"/><path d="M946.7 194.8L963.9 216.5L929.5 216.5Z" fill="#6fae7d"/><path d="M946.7 181.0L960.4 206.2L932.9 206.2Z" fill="#7fb78a"/><path d="M946.7 167.3L956.4 193.6L936.9 193.6Z" fill="#6fae7d"/></g><g><rect x="1035.0" y="162.5" width="4.6" height="33.1" fill="#5f7f3c"/><circle cx="1023.6" cy="163.2" r="13.8" fill="#7fb78a"/><circle cx="1051.1" cy="163.2" r="13.8" fill="#7fb78a"/><circle cx="1037.3" cy="154.5" r="17.2" fill="#6fae7d"/><circle cx="1032.2" cy="148.5" r="8.6" fill="#6fae7d" opacity=".55"/></g><g><rect x="1126.5" y="199.5" width="3.1" height="9.2" fill="#5f7f3c"/><path d="M1128.0 182.2L1143.3 201.6L1112.7 201.6Z" fill="#6fae7d"/><path d="M1128.0 169.9L1140.2 192.4L1115.8 192.4Z" fill="#7fb78a"/><path d="M1128.0 157.7L1136.7 181.1L1119.3 181.1Z" fill="#6fae7d"/></g><g><rect x="1216.9" y="229.8" width="3.6" height="10.8" fill="#5f7f3c"/><path d="M1218.7 209.5L1236.6 232.2L1200.7 232.2Z" fill="#6fae7d"/><path d="M1218.7 195.1L1233.0 221.5L1204.3 221.5Z" fill="#7fb78a"/><path d="M1218.7 180.7L1228.9 208.3L1208.5 208.3Z" fill="#6fae7d"/></g><g><rect x="1306.9" y="215.7" width="4.8" height="34.4" fill="#5f7f3c"/><circle cx="1295.0" cy="216.4" r="14.3" fill="#7fb78a"/><circle cx="1323.6" cy="216.4" r="14.3" fill="#7fb78a"/><circle cx="1309.3" cy="207.5" r="17.9" fill="#6fae7d"/><circle cx="1304.0" cy="201.2" r="8.9" fill="#6fae7d" opacity=".55"/></g><path d="M-12.0 277.0L0.0 277.5L12.0 278.0L24.0 278.4L36.0 278.6L48.0 278.6L60.0 278.3L72.0 277.7L84.0 276.8L96.0 275.6L108.0 274.2L120.0 272.7L132.0 271.1L144.0 269.5L156.0 268.1L168.0 266.9L180.0 266.0L192.0 265.6L204.0 265.7L216.0 266.4L228.0 267.6L240.0 269.5L252.0 271.9L264.0 274.9L276.0 278.4L288.0 282.2L300.0 286.3L312.0 290.5L324.0 294.8L336.0 298.9L348.0 302.9L360.0 306.5L372.0 309.8L384.0 312.5L396.0 314.8L408.0 316.5L420.0 317.6L432.0 318.3L444.0 318.5L456.0 318.4L468.0 317.9L480.0 317.3L492.0 316.5L504.0 315.8L516.0 315.2L528.0 314.7L540.0 314.5L552.0 314.6L564.0 315.0L576.0 315.6L588.0 316.6L600.0 317.7L612.0 319.0L624.0 320.3L636.0 321.6L648.0 322.8L660.0 323.6L672.0 324.2L684.0 324.3L696.0 323.9L708.0 322.9L720.0 321.4L732.0 319.3L744.0 316.6L756.0 313.4L768.0 309.8L780.0 305.8L792.0 301.6L804.0 297.3L816.0 293.0L828.0 288.9L840.0 285.0L852.0 281.5L864.0 278.4L876.0 275.8L888.0 273.7L900.0 272.2L912.0 271.3L924.0 270.9L936.0 270.9L948.0 271.3L960.0 272.0L972.0 272.9L984.0 273.9L996.0 274.9L1008.0 275.7L1020.0 276.4L1032.0 276.9L1044.0 277.0L1056.0 276.9L1068.0 276.4L1080.0 275.8L1092.0 274.9L1104.0 273.8L1116.0 272.8L1128.0 271.8L1140.0 270.9L1152.0 270.3L1164.0 270.0L1176.0 270.2L1188.0 270.9L1200.0 272.1L1212.0 273.9L1224.0 276.3L1236.0 279.2L1248.0 282.5L1260.0 286.3L1272.0 290.3L1284.0 294.6L1296.0 298.9L1308.0 303.1L1320.0 307.2L1332.0 311.0L1344.0 314.4L1356.0 317.3L1368.0 319.7L1380.0 321.5L1392.0 322.7L1404.0 323.4L1416.0 323.6L1428.0 323.3L1440.0 322.6L1452.0 321.6L1452 420L-12 420Z" fill="#8cbd95"/><g><rect x="101.0" y="268.9" width="4.0" height="11.9" fill="#5f7f3c"/><path d="M103.0 246.4L122.9 271.6L83.1 271.6Z" fill="#4a8d62"/><path d="M103.0 230.5L118.9 259.6L87.1 259.6Z" fill="#5a9a6b"/><path d="M103.0 214.5L114.2 245.0L91.7 245.0Z" fill="#4a8d62"/></g><g><rect x="175.8" y="233.4" width="5.4" height="38.7" fill="#5f7f3c"/><circle cx="162.4" cy="234.2" r="16.1" fill="#5a9a6b"/><circle cx="194.6" cy="234.2" r="16.1" fill="#5a9a6b"/><circle cx="178.5" cy="224.1" r="20.1" fill="#4a8d62"/><circle cx="172.5" cy="217.1" r="10.1" fill="#4a8d62" opacity=".55"/></g><g><rect x="339.6" y="291.1" width="5.3" height="15.9" fill="#5f7f3c"/><path d="M342.2 261.0L368.8 294.6L315.7 294.6Z" fill="#4a8d62"/><path d="M342.2 239.8L363.5 278.7L321.0 278.7Z" fill="#5a9a6b"/><path d="M342.2 218.5L357.3 259.2L327.2 259.2Z" fill="#4a8d62"/></g><g><rect x="415.7" y="310.9" width="4.2" height="12.5" fill="#5f7f3c"/><path d="M417.8 287.3L438.7 313.7L396.9 313.7Z" fill="#4a8d62"/><path d="M417.8 270.6L434.5 301.2L401.1 301.2Z" fill="#5a9a6b"/><path d="M417.8 253.9L429.6 285.9L405.9 285.9Z" fill="#4a8d62"/></g><g><rect x="490.5" y="282.1" width="5.6" height="40.4" fill="#5f7f3c"/><circle cx="476.5" cy="282.9" r="16.8" fill="#5a9a6b"/><circle cx="510.1" cy="282.9" r="16.8" fill="#5a9a6b"/><circle cx="493.3" cy="272.4" r="21.0" fill="#4a8d62"/><circle cx="487.0" cy="265.1" r="10.5" fill="#4a8d62" opacity=".55"/></g><g><rect x="655.2" y="318.3" width="3.7" height="11.1" fill="#5f7f3c"/><path d="M657.0 297.3L675.6 320.8L638.5 320.8Z" fill="#4a8d62"/><path d="M657.0 282.5L671.9 309.7L642.2 309.7Z" fill="#5a9a6b"/><path d="M657.0 267.7L667.5 296.1L646.5 296.1Z" fill="#4a8d62"/></g><g><rect x="730.4" y="312.0" width="4.4" height="13.1" fill="#5f7f3c"/><path d="M732.6 287.2L754.5 314.9L710.7 314.9Z" fill="#4a8d62"/><path d="M732.6 269.7L750.1 301.8L715.1 301.8Z" fill="#5a9a6b"/><path d="M732.6 252.2L745.0 285.8L720.2 285.8Z" fill="#4a8d62"/></g><g><rect x="893.4" y="236.6" width="5.9" height="42.0" fill="#5f7f3c"/><circle cx="878.8" cy="237.5" r="17.5" fill="#5a9a6b"/><circle cx="913.8" cy="237.5" r="17.5" fill="#5a9a6b"/><circle cx="896.3" cy="226.6" r="21.8" fill="#4a8d62"/><circle cx="889.7" cy="218.9" r="10.9" fill="#4a8d62" opacity=".55"/></g><g><rect x="969.9" y="267.2" width="3.9" height="11.7" fill="#5f7f3c"/><path d="M971.9 245.1L991.4 269.8L952.3 269.8Z" fill="#4a8d62"/><path d="M971.9 229.4L987.5 258.1L956.2 258.1Z" fill="#5a9a6b"/><path d="M971.9 213.8L982.9 243.8L960.8 243.8Z" fill="#4a8d62"/></g><g><rect x="1133.3" y="263.5" width="4.6" height="13.7" fill="#5f7f3c"/><path d="M1135.6 237.6L1158.4 266.5L1112.7 266.5Z" fill="#4a8d62"/><path d="M1135.6 219.3L1153.8 252.8L1117.3 252.8Z" fill="#5a9a6b"/><path d="M1135.6 201.0L1148.5 236.0L1122.6 236.0Z" fill="#4a8d62"/></g><g><rect x="1208.1" y="236.1" width="6.1" height="43.6" fill="#5f7f3c"/><circle cx="1193.0" cy="237.0" r="18.2" fill="#5a9a6b"/><circle cx="1229.3" cy="237.0" r="18.2" fill="#5a9a6b"/><circle cx="1211.1" cy="225.6" r="22.7" fill="#4a8d62"/><circle cx="1204.3" cy="217.7" r="11.3" fill="#4a8d62" opacity=".55"/></g><g><rect x="1284.6" y="289.2" width="4.1" height="12.3" fill="#5f7f3c"/><path d="M1286.7 266.0L1307.2 291.9L1266.1 291.9Z" fill="#4a8d62"/><path d="M1286.7 249.5L1303.1 279.6L1270.3 279.6Z" fill="#5a9a6b"/><path d="M1286.7 233.1L1298.3 264.6L1275.0 264.6Z" fill="#4a8d62"/></g><path d="M-20 346.3L-8 349.6L4 352.9L16 356.0L28 358.8L40 361.3L52 363.2L64 364.5L76 365.2L88 365.3L100 364.7L112 363.5L124 361.8L136 359.8L148 357.4L160 355.0L172 352.5L184 350.2L196 348.1L208 346.3L220 344.9L232 343.9L244 343.3L256 343.1L268 343.2L280 343.5L292 343.9L304 344.3L316 344.5L328 344.5L340 344.2L352 343.4L364 342.1L376 340.3L388 338.0L400 335.3L412 332.2L424 328.9L436 325.4L448 321.9L460 318.6L472 315.5L484 312.8L496 310.7L508 309.1L520 308.2L532 307.9L544 308.2L556 309.1L568 310.5L580 312.2L592 314.2L604 316.4L616 318.5L628 320.5L640 322.3L652 323.8L664 324.8L676 325.5L688 325.8L700 325.8L712 325.5L724 325.0L736 324.4L748 323.9L760 323.5L772 323.5L784 323.8L796 324.6L808 325.9L820 327.7L832 330.1L844 332.9L856 336.1L868 339.6L880 343.2L892 346.9L904 350.4L916 353.6L928 356.5L940 358.8L952 360.6L964 361.8L976 362.3L988 362.2L1000 361.6L1012 360.5L1024 359.1L1036 357.4L1048 355.5L1060 353.7L1072 352.1L1084 350.6L1096 349.5L1108 348.8L1120 348.4L1132 348.5L1144 348.8L1156 349.4L1168 350.1L1180 350.9L1192 351.6L1204 352.1L1216 352.3L1228 352.0L1240 351.3L1252 350.0L1264 348.2L1276 345.8L1288 343.0L1300 339.7L1312 336.1L1324 332.4L1336 328.7L1348 325.0L1360 321.7L1372 318.7L1384 316.2L1396 314.2L1408 312.9L1420 312.1L1432 312.0L1444 312.4L1456 313.2" fill="none" stroke="#f4f1d8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20 346.3L-8 349.6L4 352.9L16 356.0L28 358.8L40 361.3L52 363.2L64 364.5L76 365.2L88 365.3L100 364.7L112 363.5L124 361.8L136 359.8L148 357.4L160 355.0L172 352.5L184 350.2L196 348.1L208 346.3L220 344.9L232 343.9L244 343.3L256 343.1L268 343.2L280 343.5L292 343.9L304 344.3L316 344.5L328 344.5L340 344.2L352 343.4L364 342.1L376 340.3L388 338.0L400 335.3L412 332.2L424 328.9L436 325.4L448 321.9L460 318.6L472 315.5L484 312.8L496 310.7L508 309.1L520 308.2L532 307.9L544 308.2L556 309.1L568 310.5L580 312.2L592 314.2L604 316.4L616 318.5L628 320.5L640 322.3L652 323.8L664 324.8L676 325.5L688 325.8L700 325.8L712 325.5L724 325.0L736 324.4L748 323.9L760 323.5L772 323.5L784 323.8L796 324.6L808 325.9L820 327.7L832 330.1L844 332.9L856 336.1L868 339.6L880 343.2L892 346.9L904 350.4L916 353.6L928 356.5L940 358.8L952 360.6L964 361.8L976 362.3L988 362.2L1000 361.6L1012 360.5L1024 359.1L1036 357.4L1048 355.5L1060 353.7L1072 352.1L1084 350.6L1096 349.5L1108 348.8L1120 348.4L1132 348.5L1144 348.8L1156 349.4L1168 350.1L1180 350.9L1192 351.6L1204 352.1L1216 352.3L1228 352.0L1240 351.3L1252 350.0L1264 348.2L1276 345.8L1288 343.0L1300 339.7L1312 336.1L1324 332.4L1336 328.7L1348 325.0L1360 321.7L1372 318.7L1384 316.2L1396 314.2L1408 312.9L1420 312.1L1432 312.0L1444 312.4L1456 313.2" fill="none" stroke="#5a9a6b" stroke-width="2" stroke-dasharray="9 11" stroke-linecap="round" opacity=".7"/><path d="M-12.0 382.8L0.0 381.9L12.0 380.9L24.0 379.8L36.0 378.7L48.0 377.7L60.0 376.7L72.0 375.9L84.0 375.2L96.0 374.7L108.0 374.5L120.0 374.4L132.0 374.5L144.0 374.8L156.0 375.2L168.0 375.8L180.0 376.4L192.0 377.0L204.0 377.6L216.0 378.1L228.0 378.5L240.0 378.7L252.0 378.6L264.0 378.4L276.0 377.8L288.0 376.9L300.0 375.7L312.0 374.3L324.0 372.6L336.0 370.6L348.0 368.4L360.0 366.1L372.0 363.7L384.0 361.2L396.0 358.7L408.0 356.4L420.0 354.1L432.0 352.1L444.0 350.3L456.0 348.7L468.0 347.5L480.0 346.6L492.0 346.1L504.0 345.9L516.0 346.0L528.0 346.4L540.0 347.1L552.0 348.1L564.0 349.1L576.0 350.4L588.0 351.6L600.0 352.9L612.0 354.2L624.0 355.4L636.0 356.4L648.0 357.3L660.0 358.0L672.0 358.5L684.0 358.8L696.0 358.9L708.0 358.8L720.0 358.6L732.0 358.2L744.0 357.7L756.0 357.2L768.0 356.8L780.0 356.4L792.0 356.1L804.0 356.0L816.0 356.1L828.0 356.4L840.0 357.0L852.0 357.9L864.0 359.0L876.0 360.5L888.0 362.2L900.0 364.1L912.0 366.2L924.0 368.5L936.0 370.8L948.0 373.2L960.0 375.6L972.0 377.9L984.0 380.0L996.0 382.0L1008.0 383.7L1020.0 385.1L1032.0 386.2L1044.0 386.9L1056.0 387.3L1068.0 387.4L1080.0 387.1L1092.0 386.6L1104.0 385.7L1116.0 384.6L1128.0 383.3L1140.0 381.9L1152.0 380.4L1164.0 378.9L1176.0 377.4L1188.0 376.1L1200.0 374.8L1212.0 373.7L1224.0 372.8L1236.0 372.1L1248.0 371.6L1260.0 371.3L1272.0 371.2L1284.0 371.3L1296.0 371.5L1308.0 371.8L1320.0 372.2L1332.0 372.5L1344.0 372.9L1356.0 373.1L1368.0 373.2L1380.0 373.0L1392.0 372.7L1404.0 372.1L1416.0 371.3L1428.0 370.2L1440.0 368.8L1452.0 367.2L1452 420L-12 420Z" fill="#4f8f66"/><g><rect x="87.7" y="368.9" width="4.7" height="14.0" fill="#5f7f3c"/><path d="M90.0 342.4L113.4 372.0L66.6 372.0Z" fill="#2a5f46"/><path d="M90.0 323.7L108.7 358.0L71.3 358.0Z" fill="#2f6f4f"/><path d="M90.0 305.0L103.3 340.8L76.7 340.8Z" fill="#2a5f46"/></g><g><rect x="226.5" y="336.0" width="7.1" height="50.5" fill="#5f7f3c"/><circle cx="209.0" cy="337.1" r="21.0" fill="#2f6f4f"/><circle cx="251.0" cy="337.1" r="21.0" fill="#2f6f4f"/><circle cx="230.0" cy="323.9" r="26.3" fill="#3f8460"/><circle cx="222.1" cy="314.7" r="13.1" fill="#6fb57a" opacity=".55"/></g><g><rect x="517.3" y="337.9" width="5.4" height="16.2" fill="#5f7f3c"/><path d="M520.0 307.3L547.0 341.5L493.0 341.5Z" fill="#2a5f46"/><path d="M520.0 285.7L541.6 325.3L498.4 325.3Z" fill="#2f6f4f"/><path d="M520.0 264.1L535.3 305.5L504.7 305.5Z" fill="#2a5f46"/></g><g><rect x="757.2" y="325.6" width="5.5" height="39.5" fill="#5f7f3c"/><circle cx="743.6" cy="326.4" r="16.4" fill="#2f6f4f"/><circle cx="776.4" cy="326.4" r="16.4" fill="#2f6f4f"/><circle cx="760.0" cy="316.1" r="20.5" fill="#3f8460"/><circle cx="753.8" cy="308.9" r="10.3" fill="#6fb57a" opacity=".55"/></g><g><rect x="1006.9" y="373.6" width="6.1" height="18.4" fill="#5f7f3c"/><path d="M1010.0 338.9L1040.6 377.7L979.4 377.7Z" fill="#2a5f46"/><path d="M1010.0 314.4L1034.5 359.3L985.5 359.3Z" fill="#2f6f4f"/><path d="M1010.0 289.9L1027.3 336.9L992.7 336.9Z" fill="#2a5f46"/></g><g><rect x="1186.8" y="338.3" width="6.4" height="45.5" fill="#5f7f3c"/><circle cx="1171.1" cy="339.2" r="18.9" fill="#2f6f4f"/><circle cx="1208.9" cy="339.2" r="18.9" fill="#2f6f4f"/><circle cx="1190.0" cy="327.4" r="23.7" fill="#3f8460"/><circle cx="1182.9" cy="319.1" r="11.8" fill="#6fb57a" opacity=".55"/></g><g><rect x="1347.6" y="366.6" width="4.8" height="14.4" fill="#5f7f3c"/><path d="M1350.0 339.4L1374.0 369.8L1326.0 369.8Z" fill="#2a5f46"/><path d="M1350.0 320.2L1369.2 355.4L1330.8 355.4Z" fill="#2f6f4f"/><path d="M1350.0 301.0L1363.6 337.8L1336.4 337.8Z" fill="#2a5f46"/></g></svg>
+  </div>
+  <div class="leaves" id="leaves" aria-hidden="true"></div>
+
+  <div class="hero-content" data-speed="0.2">
+    <p class="eyebrow"><svg class="ico"><use href="#i-map"/></svg> Data Analyst &amp; Environmental Engineer</p>
+    <h1>Andressa's <em>Journey</em></h1>
+    <p class="lead">The projects, skills and responsibilities she has taken on in each stage of her career.</p>
+    <!-- Linha do tempo: para mudar um marco, edita o <b> (título) e o <small> (texto) -->
+    <ol class="milestones">
+      <li><b>BSc</b><small>Environmental Engineering · UTFPR, Brazil</small></li>
+      <li><b>MSc</b><small>Environmental Technology · IPB, Portugal</small></li>
+      <li><b>2023–2025</b><small>Funded research projects</small></li>
+      <li><b>Now</b><small>Digital Marketing &amp; Programming</small></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Atalhos para as secções desta página (o pages.js destaca o que está visível) -->
+<nav class="pillnav" aria-label="Sections on this page">
+  <div class="wrap pillnav-in">
+    <a href="#bioproduct">BIOPRODUCT</a>
+    <a href="#harvest">HARVEST</a>
+    <a href="#forestwaterup">Forest Water Up</a>
+    <a href="#thesis">Master Thesis</a>
+    <a href="#utfpr">UTFPR Projects</a>
+    <a href="#other">Other projects</a>
+    <a href="#papers">Papers</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== 01 · BIOPRODUCT <em>Project</em> =====
+     Estrutura de cada bloco: número + título + lista do que fez + links
+     (coluna da esquerda) e mosaico de fotos (coluna da direita).
+     Clica numa foto no site para ampliar. -->
+<section class="block" id="bioproduct">
+  <div class="wrap block-grid">
+    <div class="reveal">
+      <span class="block-num">01</span>
+      <p class="tag">Partnership with LIPOR</p>
+      <h2>BIOPRODUCT <em>Project</em></h2>
+      <ul class="checklist"><li>Characterized plant bioproducts: nutrients, humic acids, microbiology and phytotoxicity.</li><li>Ran greenhouse trials with lettuce and strawberry.</li><li>Managed drip irrigation and crop water requirements.</li><li>Monitored plant growth weekly.</li><li>Analyzed results statistically (ANOVA).</li></ul>
+      <ul class="link-list"><li><a href="https://www.lipor.pt/pt/" target="_blank" rel="noopener">LIPOR</a></li><li><a href="https://drive.google.com/file/d/1ABqOoKBz9tdqqelrFamFl4j5op8USNaq/view?usp=sharing" target="_blank" rel="noopener">Reported outcomes</a></li></ul>
+    </div>
+    <div class="reveal">
+        <div class="photos" data-lightbox>
+          <img src="images/bio.jpg" alt="BIOPRODUCT project – photo 1" loading="lazy">
+          <img src="images/dialise.jpg" alt="BIOPRODUCT project – photo 2" loading="lazy">
+          <img src="images/purificados.jpg" alt="BIOPRODUCT project – photo 3" loading="lazy">
+          <img src="images/fito.jpg" alt="BIOPRODUCT project – photo 4" loading="lazy">
+          <img src="images/ger.jpg" alt="BIOPRODUCT project – photo 5" loading="lazy">
+          <img src="images/imagej.jpg" alt="BIOPRODUCT project – photo 6" loading="lazy">
+          <img src="images/micro.jpg" alt="BIOPRODUCT project – photo 7" loading="lazy">
+          <img src="images/alface.jpg" alt="BIOPRODUCT project – photo 8" loading="lazy">
+          <img src="images/mor.jpg" alt="BIOPRODUCT project – photo 9" loading="lazy">
+          <img src="images/crop.jpg" alt="BIOPRODUCT project – photo 10" loading="lazy">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 · HARVEST <em>Project</em> =====
+     Estrutura de cada bloco: número + título + lista do que fez + links
+     (coluna da esquerda) e mosaico de fotos (coluna da direita).
+     Clica numa foto no site para ampliar. -->
+<section class="block alt" id="harvest">
+  <div class="wrap block-grid">
+    <div class="reveal">
+      <span class="block-num">02</span>
+      <p class="tag">Community gardens &amp; water balance</p>
+      <h2>HARVEST <em>Project</em></h2>
+      <ul class="checklist"><li>Helped design surveys of family gardens and monitored garden activity.</li><li>Led gardener training on good practices and drip irrigation.</li><li>Built a GIS database of community gardens.</li><li>Collected and analyzed soil samples.</li><li>Calculated the soil water balance (Thornthwaite-Mather).</li><li>Coordinated seedling distribution and took part in outreach events.</li></ul>
+      <ul class="link-list"><li><a href="https://drive.google.com/drive/u/0/folders/1-V22UrAwPuG6u90L4xykKo8FgIxIsDTM" target="_blank" rel="noopener">GIS maps folder</a></li><li><a href="https://drive.google.com/drive/u/0/folders/1Lh9U5iwvMOciX3cbcTfgHPY8Dvd1YLIX" target="_blank" rel="noopener">Water balance data</a></li></ul>
+    </div>
+    <div class="reveal">
+        <div class="photos" data-lightbox>
+          <img src="images/solo.jpg" alt="HARVEST project – photo 1" loading="lazy">
+          <img src="images/textura.jpg" alt="HARVEST project – photo 2" loading="lazy">
+          <img src="images/horta.jpeg" alt="HARVEST project – photo 3" loading="lazy">
+          <img src="images/horta2.JPEG" alt="HARVEST project – photo 4" loading="lazy">
+          <img src="images/wb.jpg" alt="HARVEST project – photo 5" loading="lazy">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 · Forest Water Up <em>& Soiling</em> =====
+     Estrutura de cada bloco: número + título + lista do que fez + links
+     (coluna da esquerda) e mosaico de fotos (coluna da direita).
+     Clica numa foto no site para ampliar. -->
+<section class="block" id="forestwaterup">
+  <div class="wrap block-grid">
+    <div class="reveal">
+      <span class="block-num">03</span>
+      <p class="tag">Mediterranean species</p>
+      <h2>Forest Water Up <em>& Soiling</em></h2>
+      <ul class="checklist"><li>Supported the Ecology Day experiment on four Mediterranean species: holm oak, cork oak, strawberry tree and juniper.</li><li>Handled seed collection and nursery trials.</li><li>Tracked seedling growth weekly.</li><li>Performed biomass and root measurements with ImageJ.</li><li>Prepared leaf samples.</li><li>Helped transplant seedlings to the field.</li></ul>
+      
+    </div>
+    <div class="reveal">
+        <div class="photos" data-lightbox>
+          <img src="images/plant.jpg" alt="Forest Water Up project – photo 1" loading="lazy">
+          <img src="images/planting.jpg" alt="Forest Water Up project – photo 2" loading="lazy">
+          <img src="images/estufa.jpg" alt="Forest Water Up project – photo 3" loading="lazy">
+          <img src="images/med.jpg" alt="Forest Water Up project – photo 4" loading="lazy">
+          <img src="images/select.jpg" alt="Forest Water Up project – photo 5" loading="lazy">
+          <img src="images/ac1.JPEG" alt="Forest Water Up project – photo 6" loading="lazy">
+          <img src="images/ST4-D4.jpeg" alt="Forest Water Up project – photo 7" loading="lazy">
+          <img src="images/trays.jpg" alt="Forest Water Up project – photo 8" loading="lazy">
+          <img src="images/zimbro.jpg" alt="Forest Water Up project – photo 9" loading="lazy">
+          <img src="images/sobreiro.JPEG" alt="Forest Water Up project – photo 10" loading="lazy">
+          <img src="images/euuu.jpg" alt="Forest Water Up project – photo 11" loading="lazy">
+          <img src="images/trit.jpg" alt="Forest Water Up project – photo 12" loading="lazy">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 · Master <em>Thesis</em> =====
+     Estrutura de cada bloco: número + título + lista do que fez + links
+     (coluna da esquerda) e mosaico de fotos (coluna da direita).
+     Clica numa foto no site para ampliar. -->
+<section class="block alt" id="thesis">
+  <div class="wrap block-grid">
+    <div class="reveal">
+      <span class="block-num">04</span>
+      <p class="tag">MSc in Environmental Technology · IPB</p>
+      <h2>Master <em>Thesis</em></h2>
+      <ul class="checklist"><li>Characterized sludge from five wastewater treatment plants in Northern Portugal (nutrients, heavy metals, pathogens) against European and Brazilian rules.</li><li>Ran microbiological tests (E. coli, Salmonella spp.).</li><li>Analyzed data with ANOVA, Tukey and PCA.</li><li>Supported lettuce pot experiments and monitoring.</li></ul>
+      <ul class="link-list"><li><a href="https://www.mdpi.com/2073-4395/14/5/924" target="_blank" rel="noopener">Agronomy article (MDPI)</a></li></ul>
+    </div>
+    <div class="reveal">
+        <div class="photos" data-lightbox>
+          <img src="images/tese.jpg" alt="Master thesis – photo 1" loading="lazy">
+          <img src="images/IMG_3928.jpg" alt="Master thesis – photo 2" loading="lazy">
+          <img src="images/IMG_0535.jpg" alt="Master thesis – photo 3" loading="lazy">
+          <img src="images/IMG_0661.jpg" alt="Master thesis – photo 4" loading="lazy">
+          <img src="images/IMG_0624.jpg" alt="Master thesis – photo 5" loading="lazy">
+          <img src="images/IMG_0604.jpg" alt="Master thesis – photo 6" loading="lazy">
+          <img src="images/IMG_0691.jpg" alt="Master thesis – photo 7" loading="lazy">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 · Projetos científicos na UTFPR: 3 cartões lado a lado ===== -->
+<section class="block" id="utfpr">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="block-num">05</span>
+      <p class="tag">Undergraduate research</p>
+      <h2>Scientific projects <em>at UTFPR</em></h2>
+    </div>
+    <div class="sub-grid">
+
+      <article class="sub-card reveal">
+        <span class="sub-letter">a</span>
+        <h3>Land use and soil texture effects on water retention in the Amazon</h3>
+        <p>Remote analysis of 160 soil samples using RETC and the van Genuchten model, comparing forest and pasture, sandy and clayey soils.</p>
+        
+        <div class="photos photos-2" data-lightbox>
+          <img src="images/moacir1.jpg" alt="Amazon soil water retention – photo 1" loading="lazy">
+          <img src="images/moacir2.jpg" alt="Amazon soil water retention – photo 2" loading="lazy">
+        </div>
+      </article>
+
+      <article class="sub-card reveal">
+        <span class="sub-letter">b</span>
+        <h3>Soil physical limits to soybean root elongation</h3>
+        <p>Systematic review following PRISMA guidelines; 8 core studies selected from three databases.</p>
+        <ul class="link-list"><li><a href="https://www.sciencedirect.com/science/article/abs/pii/S2452219821000999" target="_blank" rel="noopener">Review article</a></li></ul>
+        <div class="photos photos-2" data-lightbox>
+          <img src="images/artigo.jpg" alt="Soybean root elongation review – photo 1" loading="lazy">
+          <img src="images/meta.jpg" alt="Soybean root elongation review – photo 2" loading="lazy">
+        </div>
+      </article>
+
+      <article class="sub-card reveal">
+        <span class="sub-letter">c</span>
+        <h3>Water quality monitoring in the Marrecas River</h3>
+        <p>Sampled nine points for metals using TXRF; found exceedances of CONAMA 357/2005 limits; statistical analysis with ANOVA, Tukey and PCA.</p>
+        <ul class="link-list"><li><a href="https://tede.unioeste.br/bitstream/tede/5397/2/Liliane_Hellmann_2020.pdf" target="_blank" rel="noopener">PhD research (Liliane Hellmann)</a></li><li><a href="https://drive.google.com/file/d/1gvyfErRfvkGLgpJTVoNZia1_eQsklvtc/view?usp=sharing" target="_blank" rel="noopener">SICITE/UTFPR 2019 conference paper</a></li></ul>
+        <div class="photos photos-2" data-lightbox>
+          <img src="images/lilian1.jpg" alt="Marrecas River monitoring – photo 1" loading="lazy">
+          <img src="images/lilian3.jpg" alt="Marrecas River monitoring – photo 2" loading="lazy">
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 · Outros projetos: lista numerada de links =====
+     Para acrescentar um: copia uma linha <li>…</li> e muda o texto e o href. -->
+<section class="block alt" id="other">
+  <div class="wrap narrow">
+    <div class="reveal">
+      <span class="block-num">06</span>
+      <p class="tag">Occasional participations</p>
+      <h2>Other projects <em>& participations</em></h2>
+      <ol class="numlist">
+        <li><a href="https://drive.google.com/file/d/1LQ5CHnBIKKQ3FAgsMOLQLBv5McLtJ9HX/view?usp=sharing" target="_blank" rel="noopener"><span>Batch adsorption of metformin using activated carbon from coconut shell</span><svg class="ico"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://drive.google.com/file/d/1vx1XrbMeLLuJppexEqig2fdezsjgji1W/view?usp=sharing" target="_blank" rel="noopener"><span>Systematic review on soil bulk density and root growth (PRISMA)</span><svg class="ico"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://drive.google.com/file/d/1xlbhFiwtde3rgpwglEi2NHErow-gN_Ts/view?usp=sharing" target="_blank" rel="noopener"><span>Compost effects on soil organic carbon in olive groves, Northeast Portugal</span><svg class="ico"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://drive.google.com/file/d/19LB3T9VfMwHJi7MQD_afFAVww7qv4eai/view?usp=sharing" target="_blank" rel="noopener"><span>Corn cob biosorption of reactive red dye</span><svg class="ico"><use href="#i-arrow"/></svg></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 · Papers ===== -->
+<section class="block" id="papers">
+  <div class="wrap narrow center-text">
+    <div class="reveal">
+      <span class="block-num">07</span>
+      <p class="tag">Publications</p>
+      <h2>Papers</h2>
+      <p class="section-sub center-sub">Scientific articles, conference papers and posters (PT/EN).</p>
+      <a class="btn btn-solid" href="https://drive.google.com/drive/u/0/folders/1vcJ8ou9DMg8dwC-V2uk69gcU3o55r14i" target="_blank" rel="noopener">Open papers folder <svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIM DA PÁGINA: convite + floresta no fundo (igual ao Contact do index) ============ -->
+<section class="section contact end-light" id="cta">
+  <div class="wrap contact-box reveal">
+    <p class="tag">Next</p>
+    <h2>Let's talk about <em>what's next</em></h2>
+    <p>Interested in her work? Learn more about her or get in touch.</p>
+    <div class="end-buttons">
+      <a class="btn btn-solid" href="about.html">About Andressa <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-outline" href="index.html">Back to portfolio</a>
+    </div>
+  </div>
+  <svg class="layer trees t-foot" data-layer="foot" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+</section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Andressa Griebler Gusmão · Made with <svg class="ico"><use href="#i-leaf"/></svg> and a lot of coffee</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Andressa · Environmental Engineer &amp; Data Analyst</title>
+  <meta name="description" content="Who is Andressa Griebler Gusmão: academic path, research experience and current training in data, digital marketing and programming.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <!-- style.css = estilos gerais (os mesmos do index). pages.css = extras só destas páginas internas. -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="page-light">
+
+<!-- Biblioteca de ícones: igual à do index.html (lá está explicada passo a passo). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 4 10 4 16c0 2.5 1.5 4 4 4 7 0 12-6 12-16z"/><path d="M4 21c3-6 7-10 12-13"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c4 5 6.5 8 6.5 11a6.5 6.5 0 0 1-13 0C5.5 11 8 8 12 3z"/><path d="M9 15a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-pine" viewBox="0 0 24 24"><path d="M12 2l5 7h-3l4.5 6H14l3 4H7l3-4H5.500L10 9H7z"/><path d="M12 19v3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M12 13c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 11c0-3 2-5 6-5 0 3-2 5-6 5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.900 4.900l2.100 2.100M17 17l2.100 2.100M4.900 19.100L7 17M17 7l2.100-2.100"/></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24"><path d="M7 19l-3-5h4M4 14l3-5 3 1M17 5l3 5h-4M20 10l-3 5-3-1M8 5h6l-2-3M12 22l2-3H8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-grain" viewBox="0 0 24 24"><path d="M12 22V8"/><path d="M12 8c-2-1-3-3-3-5 2 1 3 3 3 5zM12 8c2-1 3-3 3-5-2 1-3 3-3 5zM12 14c-2-1-3-3-3-5 2 1 3 3 3 5zM12 14c2-1 3-3 3-5-2 1-3 3-3 5z"/></symbol>
+  </defs>
+</svg>
+
+<!-- MENU: igual ao do index, mas os links levam às outras páginas.
+     A página atual fica com class="active" (linha por baixo do nome). -->
+<header class="nav" id="nav">
+  <a href="index.html" class="brand"><svg class="ico"><use href="#i-leaf"/></svg><span>Andressa G.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  <nav id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active" aria-current="page">About</a>
+    <a href="journey.html">Journey</a>
+    <a href="geo.html">Geo Tools</a>
+    <a href="index.html#contact" class="btn-nav">Contact</a>
+  </nav>
+</header>
+
+<!-- Indicador de progresso lateral (linha + folha que desce ao fazer scroll) -->
+<div class="grow" aria-hidden="true">
+  <div class="grow-trunk"><div class="grow-fill" id="growFill"></div></div>
+  <svg class="ico grow-leaf" id="growLeaf"><use href="#i-leaf"/></svg>
+</div>
+
+<!-- ============ TOPO DA PÁGINA ABOUT: estante de livros ============
+     Tema "livros e conhecimento". Fundo claro em tons de verde-amarelado,
+     texto escuro e uma ilustração (SVG) de uma estante com plantas.
+     Os livros têm lombadas com temas da tua área (DATA, SOIL, WATER...). -->
+<section class="hero hero-sub hero-light hero-about" id="top">
+  <div class="layer blobs" data-speed="0.4"></div>
+  <div class="leaves" id="leaves" aria-hidden="true"></div>
+  <div class="hero-split">
+    <div class="hs-text" data-speed="0.15">
+      <p class="eyebrow"><svg class="ico"><use href="#i-sprout"/></svg> Data Analyst &amp; Environmental Engineer</p>
+      <h1>About <em>Andressa</em></h1>
+      <p class="lead">Environmental engineering, scientific research and data — one path that keeps growing.</p>
+      <ul class="hs-chips">
+        <li><svg class="ico"><use href="#i-pin"/></svg> Brazil → Portugal</li>
+        <li><svg class="ico"><use href="#i-drop"/></svg> Environmental research</li>
+        <li><svg class="ico"><use href="#i-chart"/></svg> Data &amp; geospatial</li>
+      </ul>
+    </div>
+    <div class="hero-art" data-speed="0.06">
+      <svg viewBox="0 -24 640 544" role="img" aria-label="Illustration of a bookshelf with plants and books about data, soil and water"><rect x="50" y="40" width="540" height="448" rx="10" fill="#2f5d4a"/><rect x="66" y="56" width="508" height="412" fill="#e8eed2"/><rect x="66" y="56" width="10" height="412" fill="#000" opacity=".05"/><rect x="70" y="488" width="16" height="16" rx="2" fill="#244a3b"/><rect x="554" y="488" width="16" height="16" rx="2" fill="#244a3b"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(-75.0)" fill="#6f9a63"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(-50.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(-25.0)" fill="#4a7b5c"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(0.0)" fill="#6f9a63"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(25.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(50.0)" fill="#4a7b5c"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(172 22) rotate(75.0)" fill="#6f9a63"/><path d="M150 12L194 12L186.1 42L157.9 42Z" fill="#c9d986"/><rect x="148" y="8" width="48" height="6" rx="2" fill="#c9d986"/><rect x="148" y="13" width="48" height="2" fill="#000" opacity=".08"/><path d="M588 52C644 120 566 220 614 336" fill="none" stroke="#4a7b5c" stroke-width="3" stroke-linecap="round"/><ellipse cx="609.0" cy="73.3" rx="10" ry="4.8" transform="rotate(35 601.0 73.3)" fill="#6f9a63"/><ellipse cx="599.6" cy="96.5" rx="10" ry="4.8" transform="rotate(-35 607.6 96.5)" fill="#8fbf5a"/><ellipse cx="617.2" cy="121.4" rx="10" ry="4.8" transform="rotate(35 609.2 121.4)" fill="#6f9a63"/><ellipse cx="599.5" cy="147.9" rx="10" ry="4.8" transform="rotate(-35 607.5 147.9)" fill="#8fbf5a"/><ellipse cx="612.0" cy="176.0" rx="10" ry="4.8" transform="rotate(35 604.0 176.0)" fill="#6f9a63"/><ellipse cx="592.2" cy="205.5" rx="10" ry="4.8" transform="rotate(-35 600.2 205.5)" fill="#8fbf5a"/><ellipse cx="605.8" cy="236.4" rx="10" ry="4.8" transform="rotate(35 597.8 236.4)" fill="#6f9a63"/><ellipse cx="590.2" cy="268.4" rx="10" ry="4.8" transform="rotate(-35 598.2 268.4)" fill="#8fbf5a"/><ellipse cx="611.1" cy="301.7" rx="10" ry="4.8" transform="rotate(35 603.1 301.7)" fill="#6f9a63"/><ellipse cx="606.0" cy="336.0" rx="10" ry="4.8" transform="rotate(-35 614.0 336.0)" fill="#8fbf5a"/><rect x="66" y="210" width="508" height="8" fill="#000" opacity=".06"/><rect x="66" y="346" width="508" height="8" fill="#000" opacity=".06"/><rect x="66" y="482" width="508" height="8" fill="#000" opacity=".06"/><g><rect x="82" y="80" width="28" height="116" rx="2.5" fill="#4a7b5c"/><rect x="82" y="89" width="28" height="3" fill="#fff" opacity=".4"/><rect x="82" y="184" width="28" height="3" fill="#fff" opacity=".4"/><rect x="107" y="80" width="3" height="116" fill="#000" opacity=".09"/><text transform="translate(99.3 138.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">DATA</text></g><g><rect x="111.5" y="96" width="24" height="100" rx="2.5" fill="#c9d986"/><rect x="111.5" y="105" width="24" height="3" fill="#fff" opacity=".4"/><rect x="111.5" y="184" width="24" height="3" fill="#fff" opacity=".4"/><rect x="132.5" y="96" width="3" height="100" fill="#000" opacity=".09"/><text transform="translate(126.8 146.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">SQL</text></g><g><rect x="137.0" y="70" width="32" height="126" rx="2.5" fill="#2f6f69"/><rect x="137.0" y="79" width="32" height="3" fill="#fff" opacity=".4"/><rect x="137.0" y="184" width="32" height="3" fill="#fff" opacity=".4"/><rect x="166.0" y="70" width="3" height="126" fill="#000" opacity=".09"/><text transform="translate(156.3 133.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">PYTHON</text></g><g><rect x="170.5" y="88" width="26" height="108" rx="2.5" fill="#8fbf5a"/><rect x="170.5" y="97" width="26" height="3" fill="#fff" opacity=".4"/><rect x="170.5" y="184" width="26" height="3" fill="#fff" opacity=".4"/><rect x="193.5" y="88" width="3" height="108" fill="#000" opacity=".09"/><text transform="translate(186.8 142.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">STATS</text></g><g><rect x="198.0" y="76" width="30" height="120" rx="2.5" fill="#ece6b8"/><rect x="198.0" y="85" width="30" height="3" fill="#fff" opacity=".4"/><rect x="198.0" y="184" width="30" height="3" fill="#fff" opacity=".4"/><rect x="225.0" y="76" width="3" height="120" fill="#000" opacity=".09"/><text transform="translate(216.3 136.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">SOIL</text></g><g><rect x="229.5" y="102" width="24" height="94" rx="2.5" fill="#3f7a8a"/><rect x="229.5" y="111" width="24" height="3" fill="#fff" opacity=".4"/><rect x="229.5" y="184" width="24" height="3" fill="#fff" opacity=".4"/><rect x="250.5" y="102" width="3" height="94" fill="#000" opacity=".09"/><text transform="translate(244.8 149.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">R</text></g><g><rect x="255.0" y="84" width="28" height="112" rx="2.5" fill="#6f9a63"/><rect x="255.0" y="93" width="28" height="3" fill="#fff" opacity=".4"/><rect x="255.0" y="184" width="28" height="3" fill="#fff" opacity=".4"/><rect x="280.0" y="84" width="3" height="112" fill="#000" opacity=".09"/></g><g transform="rotate(-16 313.62 196)"><rect x="313.62" y="92" width="26" height="104" rx="2.5" fill="#a6c172"/><rect x="313.62" y="101" width="26" height="3" fill="#fff" opacity=".4"/><rect x="313.62" y="184" width="26" height="3" fill="#fff" opacity=".4"/><rect x="336.62" y="92" width="3" height="104" fill="#000" opacity=".09"/></g><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(-75.0)" fill="#4a7b5c"/><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(-50.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(-25.0)" fill="#6f9a63"/><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(0.0)" fill="#4a7b5c"/><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(25.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(50.0)" fill="#6f9a63"/><ellipse cx="0" cy="-29.0" rx="9.9" ry="29.0" transform="translate(352 166) rotate(75.0)" fill="#4a7b5c"/><path d="M332 166L372 166L364.8 196L339.2 196Z" fill="#e3e8b0"/><rect x="330" y="162" width="44" height="6" rx="2" fill="#e3e8b0"/><rect x="330" y="167" width="44" height="2" fill="#000" opacity=".08"/><rect x="404" y="174" width="150" height="22" rx="2" fill="#f2edcf"/><rect x="404" y="174" width="150" height="3.2" fill="#4a7b5c"/><rect x="404" y="192.8" width="150" height="3.2" fill="#4a7b5c"/><rect x="404" y="174" width="13" height="22" rx="2" fill="#4a7b5c"/><rect x="409" y="154" width="132" height="20" rx="2" fill="#f2edcf"/><rect x="409" y="154" width="132" height="3.2" fill="#cfdd8e"/><rect x="409" y="170.8" width="132" height="3.2" fill="#cfdd8e"/><rect x="409" y="154" width="13" height="20" rx="2" fill="#cfdd8e"/><rect x="404" y="132" width="140" height="22" rx="2" fill="#f2edcf"/><rect x="404" y="132" width="140" height="3.2" fill="#2f6f69"/><rect x="404" y="150.8" width="140" height="3.2" fill="#2f6f69"/><rect x="404" y="132" width="13" height="22" rx="2" fill="#2f6f69"/><g transform="translate(470 133)"><ellipse cy="-9" rx="7.5" ry="9.5" fill="#b8a04e"/><path d="M-9 -15A9 7 0 0 1 9 -15Z" fill="#7d6a2c"/><rect x="-1" y="-24" width="2" height="4" fill="#7d6a2c"/></g><rect x="82" y="310" width="112" height="22" rx="2" fill="#f2edcf"/><rect x="82" y="310" width="112" height="3.2" fill="#8fbf5a"/><rect x="82" y="328.8" width="112" height="3.2" fill="#8fbf5a"/><rect x="82" y="310" width="13" height="22" rx="2" fill="#8fbf5a"/><rect x="87" y="290" width="98" height="20" rx="2" fill="#f2edcf"/><rect x="87" y="290" width="98" height="3.2" fill="#3f7a8a"/><rect x="87" y="306.8" width="98" height="3.2" fill="#3f7a8a"/><rect x="87" y="290" width="13" height="20" rx="2" fill="#3f7a8a"/><rect x="82" y="268" width="104" height="22" rx="2" fill="#f2edcf"/><rect x="82" y="268" width="104" height="3.2" fill="#ece6b8"/><rect x="82" y="286.8" width="104" height="3.2" fill="#ece6b8"/><rect x="82" y="268" width="13" height="22" rx="2" fill="#ece6b8"/><ellipse cx="0" cy="-13.0" rx="4.4" ry="13.0" transform="translate(136 244) rotate(-60.0)" fill="#6f9a63"/><ellipse cx="0" cy="-13.0" rx="4.4" ry="13.0" transform="translate(136 244) rotate(-30.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-13.0" rx="4.4" ry="13.0" transform="translate(136 244) rotate(0.0)" fill="#6f9a63"/><ellipse cx="0" cy="-13.0" rx="4.4" ry="13.0" transform="translate(136 244) rotate(30.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-13.0" rx="4.4" ry="13.0" transform="translate(136 244) rotate(60.0)" fill="#6f9a63"/><path d="M124 248L148 248L143.7 268L128.3 268Z" fill="#c9d986"/><rect x="122" y="244" width="28" height="6" rx="2" fill="#c9d986"/><rect x="122" y="249" width="28" height="2" fill="#000" opacity=".08"/><g><rect x="212" y="220" width="28" height="112" rx="2.5" fill="#2f6f69"/><rect x="212" y="229" width="28" height="3" fill="#fff" opacity=".4"/><rect x="212" y="320" width="28" height="3" fill="#fff" opacity=".4"/><rect x="237" y="220" width="3" height="112" fill="#000" opacity=".09"/><text transform="translate(229.3 276.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">WATER</text></g><g><rect x="241.5" y="234" width="24" height="98" rx="2.5" fill="#a6c172"/><rect x="241.5" y="243" width="24" height="3" fill="#fff" opacity=".4"/><rect x="241.5" y="320" width="24" height="3" fill="#fff" opacity=".4"/><rect x="262.5" y="234" width="3" height="98" fill="#000" opacity=".09"/><text transform="translate(256.8 283.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">FOREST</text></g><g><rect x="267.0" y="208" width="32" height="124" rx="2.5" fill="#4a7b5c"/><rect x="267.0" y="217" width="32" height="3" fill="#fff" opacity=".4"/><rect x="267.0" y="320" width="32" height="3" fill="#fff" opacity=".4"/><rect x="296.0" y="208" width="3" height="124" fill="#000" opacity=".09"/><text transform="translate(286.3 270.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">GIS</text></g><g><rect x="300.5" y="228" width="26" height="104" rx="2.5" fill="#ece6b8"/><rect x="300.5" y="237" width="26" height="3" fill="#fff" opacity=".4"/><rect x="300.5" y="320" width="26" height="3" fill="#fff" opacity=".4"/><rect x="323.5" y="228" width="3" height="104" fill="#000" opacity=".09"/><text transform="translate(316.8 280.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">ECOLOGY</text></g><g><rect x="328.0" y="216" width="30" height="116" rx="2.5" fill="#8fbf5a"/><rect x="328.0" y="225" width="30" height="3" fill="#fff" opacity=".4"/><rect x="328.0" y="320" width="30" height="3" fill="#fff" opacity=".4"/><rect x="355.0" y="216" width="3" height="116" fill="#000" opacity=".09"/><text transform="translate(346.3 274.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">CLIMATE</text></g><g transform="rotate(-14 387.5 332)"><rect x="387.5" y="232" width="26" height="100" rx="2.5" fill="#3f7a8a"/><rect x="387.5" y="241" width="26" height="3" fill="#fff" opacity=".4"/><rect x="387.5" y="320" width="26" height="3" fill="#fff" opacity=".4"/><rect x="410.5" y="232" width="3" height="100" fill="#000" opacity=".09"/></g><path d="M486 300L532 300L523.7 332L494.3 332Z" fill="#e3e8b0"/><rect x="484" y="296" width="50" height="6" rx="2" fill="#e3e8b0"/><rect x="484" y="301" width="50" height="2" fill="#000" opacity=".08"/><g><rect x="505.5" y="252.0" width="7.0" height="50.0" fill="#5f7f3c"/><circle cx="488.2" cy="253.0" r="20.8" fill="#4a7b5c"/><circle cx="529.8" cy="253.0" r="20.8" fill="#4a7b5c"/><circle cx="509.0" cy="240.0" r="26.0" fill="#6f9a63"/><circle cx="501.2" cy="230.9" r="13.0" fill="#9fcf7a" opacity=".55"/></g><g><rect x="82" y="364" width="30" height="104" rx="2.5" fill="#4a7b5c"/><rect x="82" y="373" width="30" height="3" fill="#fff" opacity=".4"/><rect x="82" y="456" width="30" height="3" fill="#fff" opacity=".4"/><rect x="109" y="364" width="3" height="104" fill="#000" opacity=".09"/><text transform="translate(100.3 416.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">NOTES</text></g><g><rect x="113.5" y="378" width="26" height="90" rx="2.5" fill="#cfdd8e"/><rect x="113.5" y="387" width="26" height="3" fill="#fff" opacity=".4"/><rect x="113.5" y="456" width="26" height="3" fill="#fff" opacity=".4"/><rect x="136.5" y="378" width="3" height="90" fill="#000" opacity=".09"/></g><g><rect x="141.0" y="356" width="28" height="112" rx="2.5" fill="#2f6f69"/><rect x="141.0" y="365" width="28" height="3" fill="#fff" opacity=".4"/><rect x="141.0" y="456" width="28" height="3" fill="#fff" opacity=".4"/><rect x="166.0" y="356" width="3" height="112" fill="#000" opacity=".09"/></g><g><rect x="170.5" y="372" width="24" height="96" rx="2.5" fill="#a6c172"/><rect x="170.5" y="381" width="24" height="3" fill="#fff" opacity=".4"/><rect x="170.5" y="456" width="24" height="3" fill="#fff" opacity=".4"/><rect x="191.5" y="372" width="3" height="96" fill="#000" opacity=".09"/></g><g><rect x="196.0" y="350" width="32" height="118" rx="2.5" fill="#8fbf5a"/><rect x="196.0" y="359" width="32" height="3" fill="#fff" opacity=".4"/><rect x="196.0" y="456" width="32" height="3" fill="#fff" opacity=".4"/><rect x="225.0" y="350" width="3" height="118" fill="#000" opacity=".09"/><text transform="translate(215.3 409.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#1f3d2f">PAPERS</text></g><g><rect x="229.5" y="368" width="26" height="100" rx="2.5" fill="#ece6b8"/><rect x="229.5" y="377" width="26" height="3" fill="#fff" opacity=".4"/><rect x="229.5" y="456" width="26" height="3" fill="#fff" opacity=".4"/><rect x="252.5" y="368" width="3" height="100" fill="#000" opacity=".09"/></g><g><rect x="257.0" y="360" width="30" height="108" rx="2.5" fill="#3f7a8a"/><rect x="257.0" y="369" width="30" height="3" fill="#fff" opacity=".4"/><rect x="257.0" y="456" width="30" height="3" fill="#fff" opacity=".4"/><rect x="284.0" y="360" width="3" height="108" fill="#000" opacity=".09"/><text transform="translate(275.3 414.0) rotate(-90)" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#ffffff">THESIS</text></g><g><rect x="288.5" y="378" width="24" height="90" rx="2.5" fill="#6f9a63"/><rect x="288.5" y="387" width="24" height="3" fill="#fff" opacity=".4"/><rect x="288.5" y="456" width="24" height="3" fill="#fff" opacity=".4"/><rect x="309.5" y="378" width="3" height="90" fill="#000" opacity=".09"/></g><g><rect x="314.0" y="366" width="28" height="102" rx="2.5" fill="#c9d986"/><rect x="314.0" y="375" width="28" height="3" fill="#fff" opacity=".4"/><rect x="314.0" y="456" width="28" height="3" fill="#fff" opacity=".4"/><rect x="339.0" y="366" width="3" height="102" fill="#000" opacity=".09"/></g><rect x="340" y="448" width="96" height="20" rx="10" fill="#efe8c0"/><ellipse cx="436" cy="458" rx="6" ry="10" fill="#d9cf98"/><path d="M352 458q10-8 20 0t20 0t20 0" fill="none" stroke="#8fae5e" stroke-width="2"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(-80.0)" fill="#6f9a63"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(-60.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(-40.0)" fill="#4a7b5c"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(-20.0)" fill="#6f9a63"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(0.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(20.0)" fill="#4a7b5c"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(40.0)" fill="#6f9a63"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(60.0)" fill="#8fbf5a"/><ellipse cx="0" cy="-27.0" rx="9.2" ry="27.0" transform="translate(510 436) rotate(80.0)" fill="#4a7b5c"/><path d="M488 438L532 438L524.1 468L495.9 468Z" fill="#cfdd8e"/><rect x="486" y="434" width="48" height="6" rx="2" fill="#cfdd8e"/><rect x="486" y="439" width="48" height="2" fill="#000" opacity=".08"/><rect x="66" y="196" width="508" height="14" fill="#2f5d4a"/><rect x="66" y="332" width="508" height="14" fill="#2f5d4a"/><rect x="66" y="468" width="508" height="14" fill="#2f5d4a"/></svg>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- ============ QUEM É A ANDRESSA: foto + 3 "capítulos" ============
+     O texto é o teu, palavra por palavra; só o dividi em 3 capítulos
+     (Brasil, Portugal, Hoje) para ficar mais fácil de ler. -->
+<section class="section about" id="intro">
+  <div class="wrap intro-grid">
+    <figure class="portrait intro-photo reveal">
+      <div class="portrait-frame"><img src="images/eu.jpg" alt="Andressa Griebler Gusmão" loading="lazy"></div>
+      <svg class="ico blob-leaf l1"><use href="#i-leaf"/></svg>
+      <svg class="ico blob-leaf l2"><use href="#i-pine"/></svg>
+    </figure>
+    <div>
+      <p class="tag reveal">Introduction</p>
+      <h2 class="reveal">Who is <em>Andressa?</em></h2>
+      <ol class="chapters">
+        <li class="reveal">
+          <span class="chap-n">Chapter 01</span>
+          <h3>Roots in Brazil</h3>
+          <p>Brazilian, 25 years old, Andressa has built her academic and professional trajectory around data analysis. During her undergraduate studies, she completed three scientific initiation projects, which gave her a strong foundation in data handling, Microsoft Office tools, and statistical procedures. Her mandatory internship and later position in an environmental consultancy further developed her skills in technical reporting, data visualization, and geospatial data analysis.</p>
+        </li>
+        <li class="reveal">
+          <span class="chap-n">Chapter 02</span>
+          <h3>Research in Portugal</h3>
+          <p>She moved to Portugal to pursue a master’s degree at the Polytechnic Institute of Bragança (IPB), where she strengthened her skills in data processing, interpretation, and integration within a scientific research context. After completing her degree, she remained in Portugal and joined two funded research projects between 2023 and 2025, while also collaborating voluntarily in two others. During this period, she worked with environmental monitoring datasets, statistical modelling, geospatial analysis, and both greenhouse and laboratory studies — consistently focusing on producing clear, reliable, and data-driven results.</p>
+        </li>
+        <li class="reveal">
+          <span class="chap-n">Chapter 03</span>
+          <h3>Today</h3>
+          <p>Her latest research fellowship ended in November 2025, and since then she has expanded her skill set beyond environmental sciences. She is currently enrolled in a Technical Course in Digital Marketing at IEFP and a Programming Course at Technisign, strengthening her ability to combine analytical thinking with digital strategy and automation. This multidisciplinary path reflects her goal of becoming a versatile professional capable of working across research, technology, and industry environments.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERCURSO DETALHADO (botões para Journey e CVs) ============
+     Foto à direita (images/eacs.JPEG). Atenção: o nome do ficheiro tem
+     de ser escrito exatamente igual, incluindo maiúsculas (.JPEG). -->
+<section class="section trajectory" id="trajectory">
+  <div class="wrap about-grid about-grid-rev">
+    <div class="reveal">
+      <p class="tag">Career</p>
+      <h2>Want to know what Andressa has done <em>in detail?</em></h2>
+      <p>If you want to explore the projects, skills and responsibilities she has taken on in each stage of her career, you can access her detailed professional journey and CVs below.</p>
+      <div class="btn-row">
+        <a href="journey.html" class="btn btn-solid">Andressa's Journey <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="https://www.cienciavitae.pt//en/0617-4227-62D0" class="btn btn-outline" target="_blank" rel="noopener">Academic Curriculum Vitae (CV)</a>
+        <a href="https://drive.google.com/drive/u/0/folders/1lyhLCpT0ufSXft3dKBJ4jgsow7IIPVZU" class="btn btn-outline" target="_blank" rel="noopener">Professional Curriculum</a>
+      </div>
+    </div>
+    <figure class="photo-card reveal">
+      <img src="images/eacs.JPEG" alt="Andressa presenting a scientific poster" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ EDUCAÇÃO: dois cartões ============
+     Para acrescentar um curso: copia um <article class="edu-card">. -->
+<section class="section education" id="education">
+  <div class="wrap">
+    <p class="tag reveal">Education</p>
+    <h2 class="reveal">Where it <em>all started</em></h2>
+    <div class="edu-grid">
+      <article class="edu-card reveal">
+        <div class="icon-circle"><svg class="ico"><use href="#i-sprout"/></svg></div>
+        <h3>MSc in Environmental Technology</h3>
+        <p>Instituto Politécnico de Bragança, Portugal</p>
+      </article>
+      <article class="edu-card reveal">
+        <div class="icon-circle"><svg class="ico"><use href="#i-pine"/></svg></div>
+        <h3>BSc in Environmental Engineering</h3>
+        <p>Universidade Tecnológica Federal do Paraná, Brazil</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIM DA PÁGINA: convite + floresta no fundo (igual ao Contact do index) ============ -->
+<section class="section contact end-light" id="cta">
+  <div class="wrap contact-box reveal">
+    <p class="tag">Back</p>
+    <h2>Go back to Andressa's <em>portfolio</em></h2>
+    <p>Projects, skills, outreach and contact are all on the main page.</p>
+    <div class="end-buttons">
+      <a class="btn btn-solid" href="index.html">Back to portfolio <svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+  <svg class="layer trees t-foot" data-layer="foot" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+</section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Andressa Griebler Gusmão · Made with <svg class="ico"><use href="#i-leaf"/></svg> and a lot of coffee</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>
